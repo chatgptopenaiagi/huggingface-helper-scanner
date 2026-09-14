@@ -8,7 +8,7 @@
 PYTHONPATH=src python3 -B -m hhs inspect-hf https://huggingface.co/owner/repo
 ```
 
-See [Inspector V0 documentation](docs/HF_REPOSITORY_INSPECTOR_V0.md) for offline fixtures, limits, JSON evidence and known limitations. The single Session 1 live check failed on an EOF-handling defect, subsequently fixed and tested offline; see the [validation record](reports/session-1-live-validation.json).
+See [Inspector V0 documentation](docs/HF_REPOSITORY_INSPECTOR_V0.md) for offline fixtures, limits, JSON evidence and known limitations. Session 1.1 live-validated the corrected transport with one metadata-only request; see the [validation record](reports/session-1-live-validation.json).
 
 > **DISCOVER != MODIFY**
 > **PLAN != EXECUTE**
@@ -67,4 +67,4 @@ Public visibility does not select a software license. **No license is selected i
 
 ## Stop boundary
 
-Phase 1 only. The recommended next authorized task is a Phase 1 follow-up to repeat the bounded live metadata check after the EOF fix and review its snapshot. Phase 2, compatibility scans, installers and execution remain unstarted and require separate authorization.
+Phase 1 only. Session 1.1 live acceptance is complete; its single-request authorization is consumed. Phase 2, compatibility scans, installers and execution remain unstarted and require separate authorization.

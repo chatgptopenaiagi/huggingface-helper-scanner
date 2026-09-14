@@ -9,4 +9,4 @@ The user explicitly authorized committing a sanitized public baseline. Future ra
 This JSON is not required to conform to the full draft HHS manifest schema. See [environment summary](../docs/ENVIRONMENT_BASELINE.md) and [evidence model](../docs/EVIDENCE_MODEL.md).
 
 
-[session-1-live-validation.json](session-1-live-validation.json) is a manual validation record, not a successful inspector snapshot. It records the one allowed live request, local EOF failure, unknown repository fields/byte count and zero model/file payload bytes. The fix was verified offline; no second live call occurred. It is separate from the unchanged 89-record machine baseline.
+[session-1-live-validation.json](session-1-live-validation.json) is the manual Session 1.1 acceptance report. It references the unchanged [live CLI snapshot](session-1.1-statpredict-lite.json), records one successful request, zero redirects/retries, 2,372 metadata body bytes and zero file/model payload bytes. The original failed Session 1 record is preserved within previous_session_1_attempt. Both are separate from the unchanged machine baseline.

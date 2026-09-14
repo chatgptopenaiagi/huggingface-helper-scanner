@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 2026-09-14 — Session 1.1
+
+- Live-validated the corrected, unchanged HHS transport with exactly one CLI request: eight metadata entries, 2,372 metadata bytes and zero payload bytes; EOF bug did not recur.
+- Preserved the live snapshot and previous failed attempt; all 29 deterministic tests passed afterward. No source changes or Phase 2 work.
+
+
 ## Unreleased — 2026-09-14 — Session 1
 
 - Added the Python standard-library Repository Inspector V0, conservative URL parser, bounded credential-free model metadata client, JSON CLI and evidence validation.

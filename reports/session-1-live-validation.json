@@ -1,46 +1,161 @@
 {
-  "report_format": "hhs-session-1-live-validation-0.1",
-  "recorded_at": "2026-09-14T18:02:09.511507+00:00",
+  "report_format": "hhs-session-1.1-live-acceptance-0.1",
   "artifact_kind": "manual_validation_record",
+  "timestamp": "2026-09-14T18:13:13.254446+00:00",
   "target": "https://huggingface.co/grichard99/statpredict-lite",
-  "requested_revision": null,
-  "effective_revision": "main",
-  "resolved_revision": null,
-  "request_url": "https://huggingface.co/api/models/grichard99/statpredict-lite/revision/main?blobs=true",
-  "status": "ERROR",
-  "failure": {
-    "code": "LOCAL_IMPLEMENTATION_ERROR",
-    "type": "AttributeError",
-    "reason": "The body-read loop attempted to access response.fp.raw after HTTPResponse closed at Content-Length EOF.",
-    "fix": "Stop the body loop when response.fp is None; covered by offline EOF regression test.",
-    "live_revalidated_after_fix": false
+  "starting_commit": "072f6643b3ea9c4386fc9bd26114240affba03fb",
+  "status": "SUCCESS",
+  "snapshot_path": "reports/session-1.1-statpredict-lite.json",
+  "snapshot_sha256": "36d8b088e10abd36fd567c57e04b718ca007efb74132da8104a2f521c067f77b",
+  "source": {
+    "provider": "huggingface",
+    "host": "huggingface.co",
+    "repo_type": "model",
+    "repo_id": "grichard99/statpredict-lite",
+    "owner": "grichard99",
+    "name": "statpredict-lite",
+    "requested_revision": null,
+    "effective_revision": "main",
+    "requested_path": null,
+    "resolved_revision": "dc008d3102cde6d8be879ce89d22a13536aacfec"
   },
-  "metadata_observed": {
-    "http_status": 200,
+  "http_result": {
+    "status": 200,
     "content_type": "application/json",
-    "repository_fields": null,
-    "files": null,
-    "note": "Transport reached the JSON-body read loop, but no repository snapshot was emitted; buffered content was not recovered."
+    "basis": "Successful unchanged client accepts only HTTP 200 and application/json; status/header not separately serialized in snapshot."
   },
+  "cli_exit_code": 0,
+  "eof_bug_recurred": false,
+  "phase_1_live_validated": true,
   "accounting": {
-    "network_requests_attempted": 1,
+    "requests_attempted": 1,
+    "max_requests": 1,
+    "max_pages": 1,
     "retries": 0,
+    "timeout_seconds": 10.0,
     "response_byte_limit": 1048576,
-    "max_files": 200,
-    "timeout_seconds": 10,
-    "metadata_body_bytes_retrieved": null,
-    "metadata_body_bytes_upper_bound": 1048577,
+    "metadata_body_bytes_retrieved": 2372,
+    "fixture_body_bytes_read": 0,
+    "network_requests_attempted": 1,
     "model_payload_bytes_retrieved": 0,
     "file_content_bytes_retrieved": 0,
-    "note": "Exact body count lost with failed invocation; unknown is not zero. The only request was model-info metadata."
+    "note": "Body bytes only; excludes headers/TLS. A refused oversized stream may read one extra sentinel byte. Counts bytes returned by body reads, including partial reads before failure; excludes unread or transport-buffered bytes.",
+    "redirects_followed": 0
   },
+  "limits": {
+    "max_requests": 1,
+    "max_pages": 1,
+    "max_files": 200,
+    "timeout_seconds": 10,
+    "response_byte_limit": 1048576,
+    "overflow_sentinel_bytes": 1,
+    "retry_limit": 0,
+    "redirect_limit": 0
+  },
+  "repository": {
+    "private": false,
+    "gated": false,
+    "library_name": "transformers",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "transformers",
+      "safetensors",
+      "gpt2",
+      "text-generation",
+      "sports",
+      "sports-analytics",
+      "structured-generation",
+      "json",
+      "from-scratch",
+      "prototype",
+      "en",
+      "license:apache-2.0",
+      "text-generation-inference",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "license": "apache-2.0",
+    "evidence_refs": [
+      "HF-0002"
+    ]
+  },
+  "file_count": 8,
+  "weight_formats": [
+    "safetensors"
+  ],
+  "evidence_refs": [
+    "HF-0001",
+    "HF-0002",
+    "HF-0003",
+    "HF-0004"
+  ],
+  "evidence_scope": "IDs resolve in snapshot_path; original CLI snapshot preserved unchanged.",
+  "warnings": [],
+  "errors": [],
   "security": {
-    "model_weights_downloaded": false,
-    "repository_code_executed": false,
-    "packages_installed": false,
+    "read_only": true,
     "credentials_used": false,
-    "machine_or_system_environment_modified": false
+    "repository_code_executed": false,
+    "file_contents_retrieved": false,
+    "repository_content_untrusted": true
   },
-  "weight_confirmation": "No model.safetensors or other file content endpoint was requested; file presence itself remains unobserved.",
-  "next_scope": "Stop. A new explicitly authorized Phase 1 follow-up may repeat one bounded live check; Phase 2 not started."
+  "tests": {
+    "command": "PYTHONPATH=src python3 -B -m unittest discover -s tests -v",
+    "count": 29,
+    "result": "PASS",
+    "ran_after_live_request": true
+  },
+  "known_unknowns": [
+    "File contents and independently verified payload hashes/sizes were not inspected.",
+    "No machine compatibility or workload fit conclusion.",
+    "Only this public model endpoint and observed revision were live-validated.",
+    "Byte accounting excludes HTTP/TLS overhead; timeout is not a hard DNS/header wall-clock limit."
+  ],
+  "previous_session_1_attempt": {
+    "report_format": "hhs-session-1-live-validation-0.1",
+    "recorded_at": "2026-09-14T18:02:09.511507+00:00",
+    "artifact_kind": "manual_validation_record",
+    "target": "https://huggingface.co/grichard99/statpredict-lite",
+    "requested_revision": null,
+    "effective_revision": "main",
+    "resolved_revision": null,
+    "request_url": "https://huggingface.co/api/models/grichard99/statpredict-lite/revision/main?blobs=true",
+    "status": "ERROR",
+    "failure": {
+      "code": "LOCAL_IMPLEMENTATION_ERROR",
+      "type": "AttributeError",
+      "reason": "The body-read loop attempted to access response.fp.raw after HTTPResponse closed at Content-Length EOF.",
+      "fix": "Stop the body loop when response.fp is None; covered by offline EOF regression test.",
+      "live_revalidated_after_fix": false
+    },
+    "metadata_observed": {
+      "http_status": 200,
+      "content_type": "application/json",
+      "repository_fields": null,
+      "files": null,
+      "note": "Transport reached the JSON-body read loop, but no repository snapshot was emitted; buffered content was not recovered."
+    },
+    "accounting": {
+      "network_requests_attempted": 1,
+      "retries": 0,
+      "response_byte_limit": 1048576,
+      "max_files": 200,
+      "timeout_seconds": 10,
+      "metadata_body_bytes_retrieved": null,
+      "metadata_body_bytes_upper_bound": 1048577,
+      "model_payload_bytes_retrieved": 0,
+      "file_content_bytes_retrieved": 0,
+      "note": "Exact body count lost with failed invocation; unknown is not zero. The only request was model-info metadata."
+    },
+    "security": {
+      "model_weights_downloaded": false,
+      "repository_code_executed": false,
+      "packages_installed": false,
+      "credentials_used": false,
+      "machine_or_system_environment_modified": false
+    },
+    "weight_confirmation": "No model.safetensors or other file content endpoint was requested; file presence itself remains unobserved.",
+    "next_scope": "Stop. A new explicitly authorized Phase 1 follow-up may repeat one bounded live check; Phase 2 not started."
+  },
+  "next_scope": "STOP. No additional live requests or Phase 2 work authorized."
 }

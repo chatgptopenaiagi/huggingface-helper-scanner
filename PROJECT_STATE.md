@@ -6,8 +6,8 @@
 - Full name: **HuggingFace Helper Scanner**.
 - Repository: **huggingface-helper-scanner**.
 - Current phase: **Phase 1 - Hugging Face Repository Inspector**.
-- Session: **Session 1 - Repository Inspector V0**, 2026-09-14, America/Los_Angeles.
-- Status: **Session 1 COMPLETE / Phase 1 V0 COMPLETE**, with the failed live check documented and the EOF fix validated offline. Session 0 / Phase 0 remains COMPLETE. The user explicitly authorized Phase 1 only on 2026-09-14.
+- Session: **Session 1.1 - Live Metadata Acceptance**, 2026-09-14, America/Los_Angeles.
+- Status: **Session 1.1 COMPLETE / Phase 1 V0 LIVE-VALIDATED** for the single authorized target and observed revision. Session 0 / Phase 0 remains COMPLETE. The user explicitly authorized Phase 1 only on 2026-09-14.
 - Session 1 starting commit: `b3068e6a68fd69193c226507c2d51a318edb12a5`; clean local main and remote main matched before implementation.
 - Actual local workspace: `/mnt/c/Codex-Projects/huggingface-helper-scanner`.
 - Windows equivalent: `C:\Codex-Projects\huggingface-helper-scanner`.
@@ -54,12 +54,12 @@ No packages or system components were intentionally modified. Existing failures/
 
 Python standard-library V0 supports owner/repo, tree, blob and resolve URL forms; recognizes dataset/Space families but returns UNSUPPORTED without network requests. One fixed model-info API response, no redirects/retries, 1 MiB response budget plus overflow sentinel, configurable bounded file count and socket/body-read timeout. No optional text retrieval was implemented. Snapshot IDs/provenance, requested/resolved revision, API-reported file/LFS metadata, inferred roles/framework hints, failure states, coverage and download accounting remain explicit.
 
-29 deterministic tests pass, including the real HTTP transport exercised through a fake connection, CLI offline output and structural/reference negative cases. No packages were installed. The one authorized live check of grichard99/statpredict-lite failed on a local EOF socket access bug before producing a snapshot. The bug was fixed and covered offline; no second live request was made. Live file names/sizes, repository fields and resolved revision remain UNKNOWN, and exact metadata bytes were not recovered. Model/file payload bytes are zero. See docs/HF_REPOSITORY_INSPECTOR_V0.md and reports/session-1-live-validation.json.
+Session 1.1 started from clean local/remote `072f6643b3ea9c4386fc9bd26114240affba03fb`. Exactly one existing-CLI live request succeeded on 2026-09-14T18:13:13Z: model grichard99/statpredict-lite, requested revision null (effective main), resolved `dc008d3102cde6d8be879ce89d22a13536aacfec`, eight files, 2,372 metadata body bytes, zero model/file payload bytes. HTTP 200 JSON is established by the unchanged successful transport path. EOF error did not recur. Four evidence records, no warnings/errors, complete returned-list coverage. API reports public, ungated, transformers/text-generation, license apache-2.0; gpt2 and safetensors are metadata/filename hints. All 29 deterministic tests passed after the live request; no source correction was necessary. The earlier Session 1 failure is retained within the validation report and historical journal.
 
-Remaining limitations: public model metadata only; conservative URL/path grammar; one metadata document; no text/config contents; no authentication, alias/redirect handling or retry; socket/body timeouts are not hard DNS/header wall-clock bounds; only the existing Fedora Python 3.14.7 was tested. The corrected transport has not yet passed a live acceptance check. These limitations are retained for human review; no machine compatibility verdict exists.
+Remaining limitations: public model metadata only; conservative URL/path grammar; one metadata document; no text/config contents; no authentication, alias/redirect handling or retry; socket/body timeouts are not hard DNS/header wall-clock bounds; only the existing Fedora Python 3.14.7 was tested. The corrected transport now has scoped real-world acceptance evidence. These limitations are retained for human review; no machine compatibility verdict exists.
 
 ## Exact next scope
 
-Stop at Phase 1. Final safety checks passed; the completion commit must be pushed normally and local/remote equality verified for the human handoff. A new explicitly authorized Phase 1 follow-up should repeat one bounded live metadata check after the EOF fix and review the snapshot. Phase 2 is not started or authorized. No environment scan, repair or installer follows automatically.
+Stop at Phase 1. Session 1.1 adds validation evidence/documentation only; no further live request, environment scan, repair, installer or Phase 2 work is authorized. Latest commit is HEAD; normal push and local/remote equality are verified in the human handoff.
 
 On return read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md first, then check Git. The initial checkpoint and completed Session 0 commit remain ancestors; never rewrite them. No HHS license has been selected.

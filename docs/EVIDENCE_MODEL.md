@@ -35,4 +35,4 @@ Conflicts are retained as linked competing evidence. Prefer a suitable current o
 
 V0 keeps API metadata OBSERVED, URL inputs UNVERIFIED and filename/framework/family hints INFERRED. Each snapshot observation identifies its API URL, requested/resolved revision, timestamp and scope. Metadata/file observations refer to the response-body SHA-256; file rows and derived hints reference their evidence IDs. API-reported sizes and LFS hashes are not independently verified payloads. Offline fixtures are explicitly synthetic, even when testing the OBSERVED code path.
 
-See [Inspector V0](HF_REPOSITORY_INSPECTOR_V0.md). The manual live-validation record preserves a failed invocation, unknown repository values and unknown exact metadata bytes. No API claim was recovered from that failed run, and unknown bytes are not reported as zero.
+See [Inspector V0](HF_REPOSITORY_INSPECTOR_V0.md). The manual live-validation report preserves the failed Session 1 invocation with its unknown values and separately records the successful Session 1.1 snapshot: four evidence records and 2,372 metadata body bytes. Failed-run unknown bytes are not replaced with the later successful-run count.

@@ -51,6 +51,6 @@ The Python standard-library modules are `hhs.hf.url_parser` (safe identity and r
 
 A single model-info document supplies repository and sibling file/LFS metadata under one resolved commit. File/page/byte coverage limits are explicit. Dataset/Space URLs are recognized but unsupported for inspection. README/configuration files have metadata only, with all content fetching absent. The V0 snapshot is separate from the unchanged Session 0 draft manifest.
 
-See [Inspector V0](HF_REPOSITORY_INSPECTOR_V0.md) for endpoint, bounds, URL grammar, evidence semantics and transport limitations. Fixture tests pass; the one live attempt exposed an EOF bug that was fixed and regression-tested offline. A new live acceptance check requires a new authorized Phase 1 follow-up. Phase 2 is not started.
+See [Inspector V0](HF_REPOSITORY_INSPECTOR_V0.md) for endpoint, bounds, URL grammar, evidence semantics and transport limitations. Fixture tests pass; the one live attempt exposed an EOF bug that was fixed and regression-tested offline. Session 1.1 subsequently passed its single authorized live acceptance check without source changes. Phase 2 is not started.
 
 Primary references reviewed: [Hugging Face Hub API](https://huggingface.co/docs/hub/api) and [HfApi metadata reference](https://huggingface.co/docs/huggingface_hub/package_reference/hf_api), 2026-09-14. These inform the transport contract; they do not establish compatibility or authorize remote-code execution.

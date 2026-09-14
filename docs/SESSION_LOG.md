@@ -1,6 +1,6 @@
 # Session log
 
-Current status: **Session 1 COMPLETE / Phase 1 V0 COMPLETE**, with documented live failure and offline EOF regression fix. Session 0 remains COMPLETE; Phase 2 is not started.
+Current status: **Session 1.1 COMPLETE / Phase 1 V0 LIVE-VALIDATED**, with the earlier failure preserved. Session 0 remains COMPLETE; Phase 2 is not started.
 
 ## Session 0 - HHS Genesis
 
@@ -130,3 +130,22 @@ Sources: user-authorized scope, foundation memory, official API references, synt
 Publication: normal forward `feat: add Hugging Face Repository Inspector V0` commit on main, then normal push and remote/main/HEAD/clean-state verification. Post-push identity belongs in the final human report because this commit cannot contain its own hash.
 
 **Exact next recommended authorized objective:** a Phase 1 follow-up to repeat one bounded live metadata-only validation against grichard99/statpredict-lite after the EOF fix and review the JSON evidence. Stop here until that new task. No Phase 2 machine engine, compatibility reconciliation, installer or executor work is authorized by this handoff.
+
+
+## Session 1.1 — Live metadata acceptance complete
+
+2026-09-14. Starting commit `072f6643b3ea9c4386fc9bd26114240affba03fb`; required memory/security/inspector documents read before the live action. Clean main, local HEAD, origin/main and GitHub main matched exactly, with no newer work. History preserved.
+
+Exactly one live attempt used the unchanged CLI: `PYTHONPATH=src python3 -B -m hhs inspect-hf https://huggingface.co/grichard99/statpredict-lite --max-files 200 --timeout 10 --output reports/session-1.1-statpredict-lite.json`. Exit 0; snapshot timestamp 2026-09-14T18:13:13.254446+00:00. No alternate client, additional HF endpoint, retry or redirect. HTTP 200/application-json follows from the unchanged successful transport path; headers were not separately exported. Previous AttributeError at response.fp.raw did not recur. No source correction necessary.
+
+Observed: model grichard99/statpredict-lite; requested revision null, effective main, resolved dc008d3102cde6d8be879ce89d22a13536aacfec; public and ungated; library transformers, pipeline text-generation, API license claim apache-2.0. Eight file metadata entries: .gitattributes (1,519 bytes), README.md (7,499), config.json (758), generation_config.json (111), model.safetensors (132,075,640), special_tokens_map.json (555), tokenizer.json (114,695), tokenizer_config.json (973). Model weight has reported LFS SHA-256 and 134-byte pointer metadata; no LFS object was fetched. Safetensors format and gpt2 family remain inferred. All file paths, sizes, blob/LFS metadata, role hints and references were reviewed in the preserved CLI snapshot.
+
+Accounting: one request, zero redirects followed, zero retries, 2,372 metadata body bytes, zero model/file payload bytes. Limits: 1 MiB plus one overflow sentinel, 200 retained files, one page, 10-second socket/body timeout. Four evidence records HF-0001 through HF-0004 resolve consistently; no warnings/errors; complete coverage of the returned file list. No payload hash/size verification or machine compatibility inference.
+
+After the request, the existing complete suite `PYTHONPATH=src python3 -B -m unittest discover -s tests -v` passed all 29 tests. Existing validate_snapshot also passed on the real CLI output. Source/tests, content-route blocks and foundation artifacts remain unchanged. The report preserves the old failure as previous_session_1_attempt rather than overwriting its historical unknowns. Known limits remain model-only/one-page metadata, no content/authentication/redirects, conservative grammar, heuristic classification, no hard DNS/header wall-clock guarantee or Windows acceptance.
+
+Changed files: PROJECT_STATE.md, RESUME.md, docs/SESSION_LOG.md, docs/HF_REPOSITORY_INSPECTOR_V0.md, CHANGELOG.md, reports/session-1-live-validation.json; new reports/session-1.1-statpredict-lite.json. Minimal stale acceptance-status corrections also update README.md, reports/README.md, AGENTS.md, docs/ARCHITECTURE.md and docs/EVIDENCE_MODEL.md. Roadmap direction is unchanged. Evidence sources: startup Git checks, existing source transport contract, the one CLI invocation/snapshot and deterministic suite output. No installs, file/weight downloads, repository code execution, credentials/environment inspection, machine repair, system changes or ARX changes.
+
+Publication checks review JSON/snapshot structure, references, report-to-snapshot counts/hash, Markdown links, secret/private-path patterns and diff whitespace. Publish via normal forward commit `test: validate Repository Inspector V0 live transport`, then verify local HEAD, origin/main and GitHub main match and working tree is clean. Latest self-reference is HEAD; exact pushed hash belongs in the final human report.
+
+Session 1.1 COMPLETE: the corrected transport has real-world acceptance evidence for this target/revision. Exact next scope: STOP. No additional live request or Phase 2 work is authorized. No license selected.

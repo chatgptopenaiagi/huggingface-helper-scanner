@@ -6,7 +6,7 @@ Session 0 is COMPLETE. Read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, do
 
 ## Current boundary
 
-Session 1 permits a Python standard-library Hugging Face repository metadata inspector, CLI, fixtures, tests, JSON output and documentation. No package installation, model payloads, repository cloning/code execution, machine scans, environment repairs, system changes, ARX changes or execution engine. The single authorized live validation of grichard99/statpredict-lite was used and failed on a local EOF bug; the fix passed offline regression tests. Do not repeat live calls without a new authorized task. Stop at Phase 1; Phase 2 needs a new task.
+Session 1 permits a Python standard-library Hugging Face repository metadata inspector, CLI, fixtures, tests, JSON output and documentation. No package installation, model payloads, repository cloning/code execution, machine scans, environment repairs, system changes, ARX changes or execution engine. Session 1.1 used its one separately authorized live request successfully, validating the EOF fix; 29 offline tests passed afterward. Do not repeat live calls without a new authorized task. Stop at Phase 1; Phase 2 needs a new task.
 
 A later explicitly scoped user task can advance the phase; update project state before implementing only that scope. Do not ask redundant permission for work already authorized. Roadmap issues are memory, not execution permission.
 
