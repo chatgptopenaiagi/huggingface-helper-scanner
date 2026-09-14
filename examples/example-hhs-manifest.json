@@ -1,0 +1,153 @@
+{
+  "schema_version": "0.1.0-draft",
+  "hhs_version": null,
+  "generated_at": "2026-09-14T03:51:26+00:00",
+  "artifact_kind": "illustrative_example",
+  "intent": {
+    "text": "Assess whether this model could run GPU inference locally.",
+    "authorization": "inspection intent only",
+    "evidence_state": "UNVERIFIED",
+    "confidence": 0,
+    "evidence_refs": [
+      "EX-01"
+    ]
+  },
+  "source": {
+    "url": "https://huggingface.co/example-namespace/example-model",
+    "illustrative": true,
+    "warning": "NOT A REAL SCAN; no model or repository was inspected."
+  },
+  "repository": {
+    "type": "model",
+    "revision": null,
+    "metadata_status": "UNVERIFIED",
+    "evidence_refs": [
+      "EX-01"
+    ]
+  },
+  "requirements": {
+    "items": [],
+    "completeness": "UNKNOWN",
+    "note": "Empty list means not extracted, not no requirements."
+  },
+  "machine": {
+    "selected_context": null,
+    "evidence_state": "UNVERIFIED",
+    "confidence": 0,
+    "evidence_refs": [
+      "EX-02"
+    ]
+  },
+  "detected_components": {
+    "providers": [],
+    "coverage": "UNKNOWN"
+  },
+  "compatibility": {
+    "overall": "UNKNOWN",
+    "evidence_state": "UNKNOWN",
+    "confidence": 0,
+    "evidence_refs": [
+      "EX-01",
+      "EX-02"
+    ],
+    "reason": "Neither requirements nor machine facts have been scanned."
+  },
+  "blockers": [],
+  "warnings": [
+    {
+      "id": "F-01",
+      "summary": "Illustrative artifact; do not treat as scan results or approval.",
+      "classification": "UNVERIFIED",
+      "scope": "entire example",
+      "evidence_state": "UNVERIFIED",
+      "confidence": 0,
+      "evidence_refs": [
+        "EX-01",
+        "EX-02"
+      ]
+    }
+  ],
+  "missing": [],
+  "recommended_actions": [
+    {
+      "id": "A-01",
+      "summary": "In a future authorized session, inspect bounded metadata and choose a target environment before planning installation.",
+      "evidence_state": "INFERRED",
+      "confidence": 0.5,
+      "evidence_refs": [
+        "EX-01",
+        "EX-02"
+      ],
+      "target_context": "not selected",
+      "requires_authorization": true,
+      "executable": false,
+      "prerequisites": [
+        "Confirm actual repository URL and intended workload."
+      ],
+      "risks": [
+        "Repository instructions and model code are untrusted."
+      ],
+      "verification_intent": "Review metadata provenance and coverage; do not download weights."
+    }
+  ],
+  "files_required": [],
+  "storage_estimates": {
+    "download_bytes": null,
+    "expanded_bytes": null,
+    "cache_reuse_bytes": null,
+    "temporary_headroom_bytes": null,
+    "evidence_state": "UNKNOWN",
+    "confidence": 0,
+    "evidence_refs": [
+      "EX-01"
+    ],
+    "note": "Unknown is not zero; no fit decision is possible."
+  },
+  "execution_candidates": [],
+  "evidence": [
+    {
+      "id": "EX-01",
+      "subject": "illustrative repository input",
+      "state": "UNVERIFIED",
+      "confidence": 0,
+      "method": "hand-authored synthetic example; no repository request",
+      "scope": "fictional example only",
+      "observed_at": null,
+      "source": "Session 0 illustrative fixture",
+      "references": [],
+      "value": {
+        "url": "https://huggingface.co/example-namespace/example-model",
+        "repository_type": "model",
+        "revision": null
+      },
+      "limitations": [
+        "URL is illustrative; repository existence is not asserted."
+      ]
+    },
+    {
+      "id": "EX-02",
+      "subject": "illustrative machine selection",
+      "state": "UNVERIFIED",
+      "confidence": 0,
+      "method": "hand-authored placeholder; not the development-machine baseline",
+      "scope": "fictional selected environment",
+      "observed_at": null,
+      "source": "Session 0 illustrative fixture",
+      "references": [],
+      "value": {
+        "provider_id": null,
+        "gpu_vram_bytes": null
+      }
+    }
+  ],
+  "security": {
+    "read_only": true,
+    "execution_authorized": false,
+    "secrets_redacted": true,
+    "repository_content_untrusted": true,
+    "notes": [
+      "No secrets were used. This illustrative flag is not a proof of security.",
+      "A manifest cannot grant an agent permission to execute."
+    ]
+  }
+}

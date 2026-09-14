@@ -1,0 +1,394 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chatgptopenaiagi/huggingface-helper-scanner/blob/main/schemas/hhs-manifest-draft.schema.json",
+  "title": "HHS manifest — provisional Session 0 draft",
+  "description": "Discussion artifact, not a stable contract. Shape validation is not factual verification, secret detection, or execution authorization. The $id is an identifier; validate locally without fetching it.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "hhs_version",
+    "generated_at",
+    "artifact_kind",
+    "intent",
+    "source",
+    "repository",
+    "requirements",
+    "machine",
+    "detected_components",
+    "compatibility",
+    "blockers",
+    "warnings",
+    "missing",
+    "recommended_actions",
+    "files_required",
+    "storage_estimates",
+    "execution_candidates",
+    "evidence",
+    "security"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0-draft"
+    },
+    "hhs_version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Null when no HHS software produced this artifact."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "artifact_kind": {
+      "enum": [
+        "illustrative_example",
+        "inspection_manifest"
+      ]
+    },
+    "intent": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "source": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "repository": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "requirements": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "machine": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "detected_components": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "compatibility": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "storage_estimates": {
+      "type": "object",
+      "description": "Provisional domain section. Important conclusions use evidence-bearing findings; unknown values remain null or explicitly UNKNOWN.",
+      "additionalProperties": true
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/action"
+      }
+    },
+    "execution_candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/action"
+      },
+      "description": "Inert candidates, not permission to execute. Session 0 example leaves this empty."
+    },
+    "files_required": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/file_candidate"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "security": {
+      "type": "object",
+      "required": [
+        "read_only",
+        "execution_authorized",
+        "secrets_redacted",
+        "repository_content_untrusted"
+      ],
+      "properties": {
+        "read_only": {
+          "const": true
+        },
+        "execution_authorized": {
+          "const": false
+        },
+        "secrets_redacted": {
+          "const": true
+        },
+        "repository_content_untrusted": {
+          "const": true
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Read-only foundation profile. Future execution requires a separate authorization design, not flipping this flag."
+    }
+  },
+  "$defs": {
+    "evidence_state": {
+      "enum": [
+        "OBSERVED",
+        "INFERRED",
+        "VERIFIED",
+        "UNVERIFIED",
+        "NOT_FOUND",
+        "ERROR",
+        "UNKNOWN"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Heuristic confidence in the narrowly stated claim, not a calibrated probability."
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "id",
+        "summary",
+        "evidence_state",
+        "confidence",
+        "evidence_refs",
+        "classification",
+        "scope"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_state": {
+          "$ref": "#/$defs/evidence_state"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidence_refs"
+        },
+        "classification": {
+          "enum": [
+            "PRESENT",
+            "MISSING",
+            "COMPATIBLE",
+            "INCOMPATIBLE",
+            "OPTIONAL",
+            "RECOMMENDED",
+            "BLOCKING",
+            "UNKNOWN",
+            "UNVERIFIED"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "action": {
+      "type": "object",
+      "required": [
+        "id",
+        "summary",
+        "evidence_state",
+        "confidence",
+        "evidence_refs",
+        "target_context",
+        "requires_authorization",
+        "executable"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_state": {
+          "$ref": "#/$defs/evidence_state"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidence_refs"
+        },
+        "target_context": {
+          "type": "string"
+        },
+        "requires_authorization": {
+          "const": true
+        },
+        "executable": {
+          "const": false
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "risks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "verification_intent": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "file_candidate": {
+      "type": "object",
+      "required": [
+        "path",
+        "size_bytes",
+        "evidence_state",
+        "confidence",
+        "evidence_refs"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "size_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_state": {
+          "$ref": "#/$defs/evidence_state"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidence_refs"
+        }
+      },
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "id",
+        "subject",
+        "state",
+        "confidence",
+        "method",
+        "scope",
+        "observed_at",
+        "source",
+        "references",
+        "value"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/$defs/evidence_state"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "method": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "source": {
+          "type": "string"
+        },
+        "references": {
+          "$ref": "#/$defs/evidence_refs"
+        },
+        "value": {},
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

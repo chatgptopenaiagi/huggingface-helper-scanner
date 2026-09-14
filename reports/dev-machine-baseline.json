@@ -1,0 +1,3950 @@
+{
+  "report_format": "hhs-development-baseline-0.1-draft",
+  "generated_at": "2026-09-14T03:51:26+00:00",
+  "session": "Session 0 - HHS Genesis",
+  "local_session_date": "2026-09-13",
+  "timezone": "America/Los_Angeles",
+  "generator": {
+    "kind": "manual bounded development inventory",
+    "hhs_software_executed": false
+  },
+  "scope": {
+    "read_only_targets": true,
+    "metadata_outputs_written": true,
+    "recursive_disk_scans": false,
+    "personal_files_scanned": false,
+    "full_environment_dumped": false,
+    "credentials_queried": false,
+    "credential_values_exported": false,
+    "package_changes": false,
+    "model_downloads": false,
+    "provider_count": 9,
+    "coverage": "bounded named commands plus fixed known/conventional interpreter paths; not exhaustive",
+    "confidence_semantics": "heuristic claim confidence, not probability; confidence in ERROR means the probe failure was observed, not that a component is absent"
+  },
+  "host_windows": {
+    "os": {
+      "value": {
+        "caption": "Microsoft Windows 10 Pro",
+        "build": "10.0.19045.7725",
+        "architecture": "64-bit"
+      },
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "V-OS"
+      ]
+    },
+    "cpu": {
+      "value": {
+        "model": "AMD Ryzen 5 5600G with Radeon Graphics",
+        "cores": 6,
+        "logical_processors": 12
+      },
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "V-CPU"
+      ]
+    },
+    "physical_ram_bytes": {
+      "value": 68719476736,
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-RAM-MODULES"
+      ]
+    },
+    "os_visible_physical_ram_bytes": {
+      "value": 68047577088,
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-SYSTEM"
+      ]
+    },
+    "powershell": {
+      "value": "5.1.19041.7725",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-POWERSHELL"
+      ]
+    }
+  },
+  "wsl": {
+    "context": {
+      "value": {
+        "distribution": "FedoraLinux-44",
+        "generation": 2
+      },
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "V-WSL"
+      ]
+    },
+    "version": {
+      "value": "2.7.14.0",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-WSL-VERSION"
+      ]
+    },
+    "wslg_version": {
+      "value": "1.0.73.2",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-WSL-VERSION"
+      ]
+    },
+    "registered_distributions": {
+      "value": [
+        {
+          "name": "FedoraLinux-44",
+          "state": "Running",
+          "generation": 2
+        },
+        {
+          "name": "docker-desktop",
+          "state": "Running",
+          "generation": 2
+        }
+      ],
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-WSL-DISTROS"
+      ]
+    },
+    "ubuntu_26_04": {
+      "value": null,
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "evidence_refs": [
+        "W-WSL-DISTROS"
+      ],
+      "scope": "current Windows user WSL registration list only"
+    }
+  },
+  "fedora": {
+    "release": {
+      "value": "44 (WSL)",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-OS"
+      ]
+    },
+    "kernel": {
+      "value": "6.18.33.2-microsoft-standard-WSL2",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-KERNEL"
+      ]
+    },
+    "architecture": {
+      "value": "x86_64",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "L-ARCH",
+        "L-CPU"
+      ]
+    },
+    "user": {
+      "value": {
+        "name": "<LINUX_USER>",
+        "uid": 1000
+      },
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-USER",
+        "L-USER-NAME"
+      ]
+    },
+    "systemd_state": {
+      "value": "running",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-SYSTEMD"
+      ]
+    },
+    "ram_bytes": {
+      "value": 33322299392,
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-RAM"
+      ]
+    },
+    "available_ram_bytes": {
+      "value": 31257235456,
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-RAM"
+      ]
+    },
+    "swap_bytes": {
+      "value": 8589934592,
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-RAM"
+      ]
+    },
+    "workspace": {
+      "value": "<WINDOWS_SHARED_PROJECTS>/huggingface-helper-scanner",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-DISK"
+      ]
+    },
+    "windows_path_appended": {
+      "value": false,
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-WSL-CONFIG"
+      ]
+    }
+  },
+  "gpu": {
+    "nvidia": {
+      "value": {
+        "name": "NVIDIA GeForce RTX 3050",
+        "vram_bytes": 6442450944,
+        "compute_capability": "8.6"
+      },
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "V-GPU"
+      ]
+    },
+    "driver_version": {
+      "value": "616.92",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-GPU",
+        "W-TOOL-nvidia-smi"
+      ]
+    },
+    "windows_cim_driver_version": {
+      "value": "32.0.16.1692",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-GPU-CIM"
+      ]
+    },
+    "other_adapter": {
+      "value": "AMD Radeon(TM) Graphics",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-GPU-CIM"
+      ]
+    }
+  },
+  "cuda": {
+    "driver_api_capability": {
+      "value": {
+        "raw": 13040,
+        "formatted": "13.4"
+      },
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-CUDA-DRIVER-API"
+      ]
+    },
+    "toolkits": [
+      {
+        "environment": "Fedora",
+        "path": "/usr/local/cuda-13.4",
+        "nvcc_version": "13.4.59",
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "L-TOOL-nvcc"
+        ]
+      },
+      {
+        "environment": "Windows",
+        "path": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.4",
+        "nvcc_version": "13.4.46",
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "W-TOOL-nvcc"
+        ]
+      }
+    ],
+    "relationship_note": "Driver capability, toolkit, native libraries and framework-bundled runtime are separate facts. No version equality rule or workload compatibility verdict is inferred."
+  },
+  "cudnn": {
+    "fedora_native": {
+      "value": {
+        "runtime_integer": 92501,
+        "version": "9.25.1"
+      },
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "V-CUDNN-LINUX"
+      ]
+    },
+    "windows_native": {
+      "value": {
+        "runtime_integer": 92501,
+        "version": "9.25.1",
+        "path": "C:\\Program Files\\NVIDIA\\CUDNN\\v9.25\\bin\\13.4\\x64\\cudnn64_9.dll"
+      },
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-CUDNN"
+      ]
+    },
+    "framework_runtimes": "See per-provider pytorch section; native library version does not determine framework build."
+  },
+  "python": {
+    "providers": [
+      {
+        "id": "P-fedora-system",
+        "provider_id": "fedora-system",
+        "path": "/usr/bin/python3",
+        "observed_at": "2026-09-14T03:45:50.082726+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "/usr/bin/python3",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.0.1",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-fedora-system"
+              ]
+            }
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-fedora-system"
+        ]
+      },
+      {
+        "id": "P-windows-system",
+        "provider_id": "windows-system",
+        "path": "/mnt/c/Python314/python.exe",
+        "observed_at": "2026-09-14T03:45:50.145970+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "C:\\Python314\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "huggingface_hub": {
+              "version": "1.31.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-system"
+              ]
+            }
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-system"
+        ]
+      },
+      {
+        "id": "P-windows-preview",
+        "provider_id": "windows-preview",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/AppData/Local/Programs/Python/Python315/python.exe",
+        "observed_at": "2026-09-14T03:45:50.317777+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.15.0b4",
+          "executable": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\Python\\Python315\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.1.2",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-preview"
+              ]
+            }
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-preview"
+        ]
+      },
+      {
+        "id": "P-windows-ai-cu132",
+        "provider_id": "windows-ai-cu132",
+        "path": "/mnt/c/AI/pytorch-cu132/Scripts/python.exe",
+        "observed_at": "2026-09-14T03:45:50.614347+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "C:\\AI\\pytorch-cu132\\Scripts\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "numpy": {
+              "version": "2.5.3",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "torch": {
+              "version": "2.14.0+cu132",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-ai-cu132"
+              ]
+            }
+          },
+          "torch_probe": {
+            "version": "2.14.0+cu132",
+            "cuda_available": true,
+            "cuda_runtime": "13.2",
+            "cudnn_runtime": 92400,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-ai-cu132"
+        ]
+      },
+      {
+        "id": "P-windows-anaconda",
+        "provider_id": "windows-anaconda",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/anaconda3/python.exe",
+        "observed_at": "2026-09-14T03:45:53.008178+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "<WINDOWS_USER_HOME>\\anaconda3\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "numpy": {
+              "version": "2.4.6",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "jsonschema": {
+              "version": "4.26.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "conda": {
+              "version": "26.7.2",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-anaconda"
+              ]
+            }
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-anaconda"
+        ]
+      },
+      {
+        "id": "P-windows-miniforge",
+        "provider_id": "windows-miniforge",
+        "path": "/mnt/c/pinokio/bin/miniforge/python.exe",
+        "observed_at": "2026-09-14T03:45:53.184456+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.10.20",
+          "executable": "C:\\pinokio\\bin\\miniforge\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "huggingface_hub": {
+              "version": "1.20.1",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "conda": {
+              "version": "26.5.3",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-miniforge"
+              ]
+            }
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-miniforge"
+        ]
+      },
+      {
+        "id": "P-windows-localai-cu133",
+        "provider_id": "windows-localai-cu133",
+        "path": "/mnt/c/LocalAI/venvs/pytorch-cuda133/python.exe",
+        "observed_at": "2026-09-14T03:45:53.379844+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.12.14",
+          "executable": "C:\\LocalAI\\venvs\\pytorch-cuda133\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "numpy": {
+              "version": "2.5.2",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "torch": {
+              "version": "2.15.0a0+gita6066c4",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-localai-cu133"
+              ]
+            }
+          },
+          "torch_probe": {
+            "version": "2.15.0a0+gita6066c4",
+            "cuda_available": true,
+            "cuda_runtime": "13.3",
+            "cudnn_runtime": null,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-localai-cu133"
+        ]
+      },
+      {
+        "id": "P-windows-daw-cu130",
+        "provider_id": "windows-daw-cu130",
+        "path": "/mnt/c/pinokio/api/theDAW-Pinokio.git/app/.venv/Scripts/python.exe",
+        "observed_at": "2026-09-14T03:45:55.753148+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.12.13",
+          "executable": "C:\\pinokio\\api\\theDAW-Pinokio.git\\app\\.venv\\Scripts\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "numpy": {
+              "version": "2.5.3",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "torch": {
+              "version": "2.14.0+cu130",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "transformers": {
+              "version": "5.17.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "huggingface_hub": {
+              "version": "1.31.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "safetensors": {
+              "version": "0.8.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "jsonschema": {
+              "version": "4.26.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-daw-cu130"
+              ]
+            }
+          },
+          "torch_probe": {
+            "version": "2.14.0+cu130",
+            "cuda_available": true,
+            "cuda_runtime": "13.0",
+            "cudnn_runtime": 92400,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-daw-cu130"
+        ]
+      },
+      {
+        "id": "P-windows-underfit-cu128",
+        "provider_id": "windows-underfit-cu128",
+        "path": "/mnt/c/pinokio/api/theDAW-Pinokio.git/app/underfit/.venv/Scripts/python.exe",
+        "observed_at": "2026-09-14T03:45:58.111848+00:00",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.10.20",
+          "executable": "C:\\pinokio\\api\\theDAW-Pinokio.git\\app\\underfit\\.venv\\Scripts\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "numpy": {
+              "version": "2.2.6",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "torch": {
+              "version": "2.7.1+cu128",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "huggingface_hub": {
+              "version": "1.15.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "safetensors": {
+              "version": "0.7.0",
+              "state": "OBSERVED",
+              "confidence": 0.9,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only",
+              "confidence": 0.6,
+              "evidence_refs": [
+                "P-windows-underfit-cu128"
+              ]
+            }
+          },
+          "torch_probe": {
+            "version": "2.7.1+cu128",
+            "cuda_available": true,
+            "cuda_runtime": "12.8",
+            "cudnn_runtime": 90701,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-underfit-cu128"
+        ]
+      }
+    ],
+    "scope": "Nine fixed providers; isolated -I -B probes exclude user-site/current directory. No environment creation or activation."
+  },
+  "pytorch": {
+    "providers": [
+      {
+        "provider_id": "windows-ai-cu132",
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-ai-cu132"
+        ],
+        "version": "2.14.0+cu132",
+        "cuda_available": true,
+        "cuda_runtime": "13.2",
+        "cudnn_runtime": 92400,
+        "gpu_name": "NVIDIA GeForce RTX 3050",
+        "compute_capability": [
+          8,
+          6
+        ],
+        "workload_verification": "UNVERIFIED; no tensor calculation, model load or inference performed in Session 0"
+      },
+      {
+        "provider_id": "windows-localai-cu133",
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-localai-cu133"
+        ],
+        "version": "2.15.0a0+gita6066c4",
+        "cuda_available": true,
+        "cuda_runtime": "13.3",
+        "cudnn_runtime": null,
+        "gpu_name": "NVIDIA GeForce RTX 3050",
+        "compute_capability": [
+          8,
+          6
+        ],
+        "workload_verification": "UNVERIFIED; no tensor calculation, model load or inference performed in Session 0"
+      },
+      {
+        "provider_id": "windows-daw-cu130",
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-daw-cu130"
+        ],
+        "version": "2.14.0+cu130",
+        "cuda_available": true,
+        "cuda_runtime": "13.0",
+        "cudnn_runtime": 92400,
+        "gpu_name": "NVIDIA GeForce RTX 3050",
+        "compute_capability": [
+          8,
+          6
+        ],
+        "workload_verification": "UNVERIFIED; no tensor calculation, model load or inference performed in Session 0"
+      },
+      {
+        "provider_id": "windows-underfit-cu128",
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "P-windows-underfit-cu128"
+        ],
+        "version": "2.7.1+cu128",
+        "cuda_available": true,
+        "cuda_runtime": "12.8",
+        "cudnn_runtime": 90701,
+        "gpu_name": "NVIDIA GeForce RTX 3050",
+        "compute_capability": [
+          8,
+          6
+        ],
+        "workload_verification": "UNVERIFIED; no tensor calculation, model load or inference performed in Session 0"
+      }
+    ],
+    "fedora_system": {
+      "value": null,
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "evidence_refs": [
+        "P-fedora-system"
+      ],
+      "scope": "isolated Fedora system Python only"
+    },
+    "container_provider": {
+      "value": null,
+      "state": "UNVERIFIED",
+      "confidence": 0,
+      "evidence_refs": [],
+      "scope": "historical PyTorch container was not started/queried in this session"
+    }
+  },
+  "development_tools": {
+    "fedora": [
+      {
+        "id": "L-TOOL-git",
+        "method": "/usr/sbin/git --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "git version 2.55.0\n",
+        "observed_at": "2026-09-14T03:44:23.763034+00:00",
+        "evidence_refs": [
+          "L-TOOL-git"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-git_lfs",
+        "method": "/usr/sbin/git lfs version",
+        "state": "ERROR",
+        "exit_code": 1,
+        "output": "git: 'lfs' is not a git command. See 'git --help'.\n\nThe most similar command is\n\trefs\n",
+        "observed_at": "2026-09-14T03:44:23.779854+00:00",
+        "evidence_refs": [
+          "L-TOOL-git_lfs"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "L-TOOL-gh",
+        "method": "/usr/sbin/gh --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "gh version 2.97.0 (2026-07-31)\nhttps://github.com/cli/cli/releases/tag/v2.97.0\n",
+        "observed_at": "2026-09-14T03:44:23.815013+00:00",
+        "evidence_refs": [
+          "L-TOOL-gh"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-codex",
+        "method": "<LINUX_HOME>/.local/bin/codex --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "codex-cli 0.154.0\n",
+        "observed_at": "2026-09-14T03:44:23.890784+00:00",
+        "evidence_refs": [
+          "L-TOOL-codex"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-python",
+        "method": "/usr/sbin/python3 -I -B --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "Python 3.14.7\n",
+        "observed_at": "2026-09-14T03:44:23.892978+00:00",
+        "evidence_refs": [
+          "L-TOOL-python"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-pip",
+        "method": "/usr/sbin/python3 -I -B -m pip --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "pip 26.0.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)\n",
+        "observed_at": "2026-09-14T03:44:24.210966+00:00",
+        "evidence_refs": [
+          "L-TOOL-pip"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-conda",
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "conda",
+        "evidence_refs": [
+          "L-TOOL-conda"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "L-TOOL-gcc",
+        "method": "/usr/sbin/gcc -dumpfullversion",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "16.2.1\n",
+        "observed_at": "2026-09-14T03:44:24.219330+00:00",
+        "evidence_refs": [
+          "L-TOOL-gcc"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-g++",
+        "method": "/usr/sbin/g++ -dumpfullversion",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "16.2.1\n",
+        "observed_at": "2026-09-14T03:44:24.227508+00:00",
+        "evidence_refs": [
+          "L-TOOL-g++"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-clang",
+        "method": "/usr/sbin/clang --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "clang version 22.1.8 (Fedora 22.1.8-4.fc44)\nTarget: x86_64-redhat-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\nConfiguration file: /etc/clang/x86_64-redhat-linux-gnu-clang.cfg\n",
+        "observed_at": "2026-09-14T03:44:24.765277+00:00",
+        "evidence_refs": [
+          "L-TOOL-clang"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-cmake",
+        "method": "/usr/sbin/cmake --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "cmake version 4.3.0\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+        "observed_at": "2026-09-14T03:44:24.821237+00:00",
+        "evidence_refs": [
+          "L-TOOL-cmake"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-ninja",
+        "method": "/usr/sbin/ninja --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "1.13.2\n",
+        "observed_at": "2026-09-14T03:44:24.826860+00:00",
+        "evidence_refs": [
+          "L-TOOL-ninja"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-rustc",
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "rustc",
+        "evidence_refs": [
+          "L-TOOL-rustc"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "L-TOOL-rustup",
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "rustup",
+        "evidence_refs": [
+          "L-TOOL-rustup"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "L-TOOL-cargo",
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "cargo",
+        "evidence_refs": [
+          "L-TOOL-cargo"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "L-TOOL-node",
+        "method": "/usr/sbin/node --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "v22.23.1\n",
+        "observed_at": "2026-09-14T03:44:24.873157+00:00",
+        "evidence_refs": [
+          "L-TOOL-node"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-npm",
+        "method": "/usr/sbin/npm --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "10.9.8\n",
+        "observed_at": "2026-09-14T03:44:25.251846+00:00",
+        "evidence_refs": [
+          "L-TOOL-npm"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-docker",
+        "method": "/usr/sbin/docker --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "Docker version 29.8.0, build 88096ef\n",
+        "observed_at": "2026-09-14T03:44:25.381075+00:00",
+        "evidence_refs": [
+          "L-TOOL-docker"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-TOOL-hf",
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "hf",
+        "evidence_refs": [
+          "L-TOOL-hf"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "L-TOOL-huggingface-cli",
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "huggingface-cli",
+        "evidence_refs": [
+          "L-TOOL-huggingface-cli"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "L-TOOL-nvcc",
+        "method": "/usr/local/cuda-13.4/bin/nvcc --version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Mon_Aug_03_13:24:11_PDT_2026\nCuda compilation tools, release 13.4, V13.4.59\nBuild cuda_13.4.r13.4/compiler.38657139_0\n",
+        "observed_at": "2026-09-14T03:44:25.453828+00:00",
+        "evidence_refs": [
+          "L-TOOL-nvcc"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "L-DOCKER-ENGINE",
+        "method": "docker version --format {{json .}}",
+        "state": "ERROR",
+        "exit_code": 1,
+        "output": "{\"Client\":{\"Platform\":{\"Name\":\"Docker Engine - Community\"},\"Version\":\"29.8.0\",\"ApiVersion\":\"1.56\",\"DefaultAPIVersion\":\"1.56\",\"GitCommit\":\"88096ef\",\"GoVersion\":\"go1.26.8\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"BuildTime\":\"Thu Sep  3 21:54:22 2026\",\"Context\":\"default\"},\"Server\":null}\npermission denied while trying to connect to the docker API at unix:///var/run/docker.sock\n",
+        "observed_at": "2026-09-14T03:44:25.476961+00:00",
+        "evidence_refs": [
+          "L-DOCKER-ENGINE"
+        ],
+        "confidence": 0.65
+      }
+    ],
+    "windows": [
+      {
+        "id": "W-TOOL-git",
+        "path": "/mnt/c/Program Files/Git/cmd/git.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:51.244311+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "git version 2.55.0.windows.5\n",
+        "evidence_refs": [
+          "W-TOOL-git"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-git-lfs",
+        "path": "/mnt/c/Program Files/Git/cmd/git.exe",
+        "arguments": [
+          "lfs",
+          "version"
+        ],
+        "observed_at": "2026-09-14T03:45:51.301564+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)\n",
+        "evidence_refs": [
+          "W-TOOL-git-lfs"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-gh",
+        "path": "/mnt/c/Program Files/GitHub CLI/gh.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:51.799773+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "gh version 2.100.0 (2026-09-03)\nhttps://github.com/cli/cli/releases/tag/v2.100.0\n",
+        "evidence_refs": [
+          "W-TOOL-gh"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-cmake",
+        "path": "/mnt/c/Program Files/CMake/bin/cmake.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:51.895197+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+        "evidence_refs": [
+          "W-TOOL-cmake"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-clang",
+        "path": "/mnt/c/Program Files/LLVM/bin/clang.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:51.969616+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "clang version 22.1.8 (https://github.com/llvm/llvm-project ca7933e47d3a3451d81e72ac174dcb5aa28b59d1)\nTarget: x86_64-pc-windows-msvc\nThread model: posix\nInstalledDir: C:\\Program Files\\LLVM\\bin\n",
+        "evidence_refs": [
+          "W-TOOL-clang"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-nvcc",
+        "path": "/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.4/bin/nvcc.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.026126+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Sun_Jul_12_11:26:23_Pacific_Standard_Time_2026\nCuda compilation tools, release 13.4, V13.4.46\nBuild cuda_13.4.r13.4/compiler.38501229_0\n",
+        "evidence_refs": [
+          "W-TOOL-nvcc"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-nvidia-smi",
+        "path": "/mnt/c/Windows/System32/nvidia-smi.exe",
+        "arguments": [
+          "--query-gpu=name,driver_version,memory.total,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "observed_at": "2026-09-14T03:45:52.068505+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "NVIDIA GeForce RTX 3050, 616.92, 6144 MiB, 8.6\n",
+        "evidence_refs": [
+          "W-TOOL-nvidia-smi"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-rustc",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/.cargo/bin/rustc.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.129314+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "rustc 1.98.1 (48a229cea 2026-09-01)\n",
+        "evidence_refs": [
+          "W-TOOL-rustc"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-cargo",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/.cargo/bin/cargo.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.215305+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "cargo 1.98.1 (797e8a9bc 2026-08-05)\n",
+        "evidence_refs": [
+          "W-TOOL-cargo"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-rustup",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/.cargo/bin/rustup.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.296690+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "rustup 1.29.1 (d95a37b6a 2026-08-13)\ninfo: This is the version for the rustup toolchain manager, not the rustc compiler.\ninfo: the currently active `rustc` version is `rustc 1.98.1 (48a229cea 2026-09-01)`\n",
+        "evidence_refs": [
+          "W-TOOL-rustup"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-node",
+        "path": "/mnt/c/Program Files/nodejs/node.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.373221+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "v26.8.1\n",
+        "evidence_refs": [
+          "W-TOOL-node"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-conda",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/anaconda3/Scripts/conda.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.424553+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "conda 26.7.2\n",
+        "evidence_refs": [
+          "W-TOOL-conda"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-docker",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.579291+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "Docker version 29.7.2, build a7dcaa6\n",
+        "evidence_refs": [
+          "W-TOOL-docker"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-ninja",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/AppData/Local/Microsoft/WinGet/Links/ninja.exe",
+        "arguments": [
+          "--version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.666410+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "1.13.2\n",
+        "evidence_refs": [
+          "W-TOOL-ninja"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-msvc",
+        "path": "/mnt/c/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+        "arguments": [],
+        "observed_at": "2026-09-14T03:45:52.732000+00:00",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "usage: cl [ option... ] filename... [ /link linkoption... ]\nMicrosoft (R) C/C++ Optimizing Compiler Version 19.51.36257 for x64\nCopyright (C) Microsoft Corporation.  All rights reserved.\n\n",
+        "evidence_refs": [
+          "W-TOOL-msvc"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-TOOL-hf-ai",
+        "path": "/mnt/c/AI/pytorch-cu132/Scripts/hf.exe",
+        "arguments": [
+          "version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.805796+00:00",
+        "state": "NOT_FOUND",
+        "scope": "this exact known installation path",
+        "evidence_refs": [
+          "W-TOOL-hf-ai"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "W-TOOL-hf-conda",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/anaconda3/Scripts/hf.exe",
+        "arguments": [
+          "version"
+        ],
+        "observed_at": "2026-09-14T03:45:52.807498+00:00",
+        "state": "NOT_FOUND",
+        "scope": "this exact known installation path",
+        "evidence_refs": [
+          "W-TOOL-hf-conda"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "W-HF-SYSTEM",
+        "observed_at": "2026-09-14T03:46:57.912245+00:00",
+        "method": "/mnt/c/Python314/Scripts/hf.exe version",
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "[OK] hf version\n  version: 1.31.0\n",
+        "evidence_refs": [
+          "W-HF-SYSTEM"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "id": "W-HF-MINIFORGE",
+        "observed_at": "2026-09-14T03:46:59.095987+00:00",
+        "method": "/mnt/c/pinokio/bin/miniforge/Scripts/hf.exe version",
+        "state": "ERROR",
+        "exit_code": 1,
+        "output": "Error: Invalid value. 'charmap' codec can't encode character '\\u2713' in position 5: character maps to <undefined>\nHint: set HF_DEBUG=1 as environment variable for full traceback.\n",
+        "evidence_refs": [
+          "W-HF-MINIFORGE"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "id": "W-NPM-NATIVE-PATH",
+        "state": "OBSERVED",
+        "method": "node.exe with native Windows npm-cli.js path --version; initial Linux-style argument was a probe error",
+        "exit_code": 0,
+        "output": "11.19.0\n",
+        "observed_at": "2026-09-14T03:48:21.664060+00:00",
+        "evidence_refs": [
+          "W-NPM-NATIVE-PATH"
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "windows_resolution": [
+      {
+        "Name": "python.exe",
+        "Source": "C:\\Python314\\python.exe"
+      },
+      {
+        "Name": "python.exe",
+        "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\Python\\Python315\\python.exe"
+      },
+      {
+        "Name": "python.exe",
+        "Source": "<WINDOWS_USER_HOME>\\anaconda3\\python.exe"
+      },
+      {
+        "Name": "python.exe",
+        "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+      },
+      {
+        "Name": "git.exe",
+        "Source": "C:\\Program Files\\Git\\cmd\\git.exe"
+      },
+      {
+        "Name": "cmake.exe",
+        "Source": "C:\\Program Files\\CMake\\bin\\cmake.exe"
+      },
+      {
+        "Name": "clang.exe",
+        "Source": "C:\\Program Files\\LLVM\\bin\\clang.exe"
+      },
+      {
+        "Name": "nvcc.exe",
+        "Source": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.4\\bin\\nvcc.exe"
+      },
+      {
+        "Name": "docker.exe",
+        "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe"
+      },
+      {
+        "Name": "docker",
+        "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker"
+      }
+    ],
+    "notes": [
+      "Version/banner success proves only that invocation, not full builds.",
+      "Fedora Docker socket denied current user; no sudo escalation or service repair attempted.",
+      "Initial Windows npm probe used an invalid Linux-style path; native-path retry succeeded.",
+      "Miniforge hf version reported an output encoding error; installed metadata remains a separate observation."
+    ]
+  },
+  "storage": {
+    "linux_mount_view": [
+      {
+        "mount": "/",
+        "total_bytes": 1081101176832,
+        "used_bytes": 38705389568,
+        "available_bytes": 987403431936,
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "L-DISK"
+        ]
+      },
+      {
+        "mount": "/mnt/c",
+        "total_bytes": 479295156224,
+        "used_bytes": 437969809408,
+        "available_bytes": 41325346816,
+        "state": "OBSERVED",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "L-DISK"
+        ]
+      }
+    ],
+    "windows_volumes": {
+      "value": [
+        {
+          "Name": "C",
+          "Used": 437970350080,
+          "Free": 41324806144
+        }
+      ],
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "W-STORAGE"
+      ]
+    },
+    "capacity_caveat": {
+      "value": "Workspace is on C:. Linux virtual filesystem free space is not a physical storage guarantee; budget against the selected output/cache filesystem.",
+      "state": "INFERRED",
+      "confidence": 0.95,
+      "evidence_refs": [
+        "L-MOUNTS",
+        "L-DISK",
+        "W-STORAGE"
+      ]
+    }
+  },
+  "historical_context": [
+    {
+      "claim": "Windows 11 Pro/build around 28000",
+      "state": "UNVERIFIED",
+      "disposition": "CONTRADICTED_BY_CURRENT_OBSERVATION",
+      "current_evidence_refs": [
+        "V-OS"
+      ]
+    },
+    {
+      "claim": "Ubuntu-26.04 installed",
+      "state": "UNVERIFIED",
+      "disposition": "NOT_IN_CURRENT_USER_REGISTRATION_LIST",
+      "current_evidence_refs": [
+        "W-WSL-DISTROS"
+      ]
+    },
+    {
+      "claim": "Windows CUDA Toolkit work around 13.3",
+      "state": "UNVERIFIED",
+      "disposition": "SELECTED_KNOWN_TOOLKIT_IS_13_4; other installations not exhaustively searched",
+      "current_evidence_refs": [
+        "W-TOOL-nvcc"
+      ]
+    },
+    {
+      "claim": "Flutter, Android tooling and additional historical providers exist",
+      "state": "UNVERIFIED",
+      "disposition": "NOT_RECHECKED; outside this bounded baseline",
+      "current_evidence_refs": []
+    }
+  ],
+  "discrepancy_policy": "Retain conflicting historical claims and current evidence; do not repair anything to match a hint.",
+  "unknowns": [
+    "No chosen Hugging Face project or workload; compatibility and resource fit UNKNOWN.",
+    "No model weights/cache-size inventory, model loading, tensor calculation or compilation in this session.",
+    "No full machine/provider inventory, Ubuntu search across other users, or container workload test.",
+    "No HHS scanner/planner/executor exists; this report is not a product scan."
+  ],
+  "evidence": [
+    {
+      "id": "L-OS",
+      "subject": "L-OS",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "cat /etc/os-release",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.716241+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "name": "Fedora Linux",
+        "version_id": "44",
+        "variant": "WSL"
+      }
+    },
+    {
+      "id": "L-KERNEL",
+      "subject": "L-KERNEL",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "uname -r",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.719892+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "6.18.33.2-microsoft-standard-WSL2\n"
+      }
+    },
+    {
+      "id": "L-ARCH",
+      "subject": "L-ARCH",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "uname -m",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.722198+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "x86_64\n"
+      }
+    },
+    {
+      "id": "L-USER",
+      "subject": "L-USER",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "id -u",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.724871+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "1000\n"
+      }
+    },
+    {
+      "id": "L-SYSTEMD",
+      "subject": "L-SYSTEMD",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "systemctl is-system-running",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.731575+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "running\n"
+      }
+    },
+    {
+      "id": "L-RAM",
+      "subject": "L-RAM",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "free -b",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.739328+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "               total        used        free      shared  buff/cache   available\nMem:     33322299392  2065063936 28341219328    38830080  3340234752 31257235456\nSwap:     8589934592           0  8589934592\n"
+      }
+    },
+    {
+      "id": "L-CPU",
+      "subject": "L-CPU",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "lscpu -J",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.747351+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "Architecture:": "x86_64",
+        "CPU(s):": "12",
+        "Model name:": "AMD Ryzen 5 5600G with Radeon Graphics",
+        "Thread(s) per core:": "2",
+        "Core(s) per socket:": "6",
+        "Hypervisor vendor:": "Microsoft"
+      }
+    },
+    {
+      "id": "L-MOUNTS",
+      "subject": "L-MOUNTS",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "findmnt -t 9p,drvfs,ext4 -o TARGET,SOURCE,FSTYPE",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.751072+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "TARGET                 SOURCE                    FSTYPE\n/                      /dev/sdd                  ext4\n├─/usr/lib/wsl/drivers drivers                   9p\n├─/mnt/wslg/distro     /dev/sdd                  ext4\n├─/mnt/c               C:\\                       9p\n└─/var/lib/docker      /dev/sdd[/var/lib/docker] ext4\n"
+      }
+    },
+    {
+      "id": "L-DISK",
+      "subject": "L-DISK",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "df -B1 / /mnt/c /mnt/c/Codex-Projects/huggingface-helper-scanner",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.759090+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "Filesystem         1B-blocks         Used    Available Use% Mounted on\n/dev/sdd       1081101176832  38705389568 987403431936   4% /\nC:\\             479295156224 437969809408  41325346816  92% /mnt/c\nC:\\             479295156224 437969809408  41325346816  92% /mnt/c\n"
+      }
+    },
+    {
+      "id": "L-WSL-CONFIG",
+      "subject": "L-WSL-CONFIG",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "cat /etc/wsl.conf",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.761580+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "# Refer to https://learn.microsoft.com/en-us/windows/wsl/wsl-config#wslconf\n# for the full set of configuration options.\n[boot]\nsystemd=true\n\n[interop]\nenabled=true\nappendWindowsPath=false\n"
+      }
+    },
+    {
+      "id": "L-TOOL-git",
+      "subject": "L-TOOL-git",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/git --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.763034+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "git version 2.55.0\n"
+      }
+    },
+    {
+      "id": "L-TOOL-git_lfs",
+      "subject": "L-TOOL-git_lfs",
+      "state": "ERROR",
+      "confidence": 0.9,
+      "method": "/usr/sbin/git lfs version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.779854+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "ERROR",
+        "exit_code": 1,
+        "output": "git: 'lfs' is not a git command. See 'git --help'.\n\nThe most similar command is\n\trefs\n"
+      }
+    },
+    {
+      "id": "L-TOOL-gh",
+      "subject": "L-TOOL-gh",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/gh --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.815013+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "gh version 2.97.0 (2026-07-31)\nhttps://github.com/cli/cli/releases/tag/v2.97.0\n"
+      }
+    },
+    {
+      "id": "L-TOOL-codex",
+      "subject": "L-TOOL-codex",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "<LINUX_HOME>/.local/bin/codex --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.890784+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "codex-cli 0.154.0\n"
+      }
+    },
+    {
+      "id": "L-TOOL-python",
+      "subject": "L-TOOL-python",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/python3 -I -B --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:23.892978+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "Python 3.14.7\n"
+      }
+    },
+    {
+      "id": "L-TOOL-pip",
+      "subject": "L-TOOL-pip",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/python3 -I -B -m pip --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:24.210966+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "pip 26.0.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)\n"
+      }
+    },
+    {
+      "id": "L-TOOL-conda",
+      "subject": "L-TOOL-conda",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "conda"
+      }
+    },
+    {
+      "id": "L-TOOL-gcc",
+      "subject": "L-TOOL-gcc",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/gcc -dumpfullversion",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:24.219330+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "16.2.1\n"
+      }
+    },
+    {
+      "id": "L-TOOL-g++",
+      "subject": "L-TOOL-g++",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/g++ -dumpfullversion",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:24.227508+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "16.2.1\n"
+      }
+    },
+    {
+      "id": "L-TOOL-clang",
+      "subject": "L-TOOL-clang",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/clang --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:24.765277+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "clang version 22.1.8 (Fedora 22.1.8-4.fc44)\nTarget: x86_64-redhat-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\nConfiguration file: /etc/clang/x86_64-redhat-linux-gnu-clang.cfg\n"
+      }
+    },
+    {
+      "id": "L-TOOL-cmake",
+      "subject": "L-TOOL-cmake",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/cmake --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:24.821237+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "cmake version 4.3.0\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n"
+      }
+    },
+    {
+      "id": "L-TOOL-ninja",
+      "subject": "L-TOOL-ninja",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/ninja --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:24.826860+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "1.13.2\n"
+      }
+    },
+    {
+      "id": "L-TOOL-rustc",
+      "subject": "L-TOOL-rustc",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "rustc"
+      }
+    },
+    {
+      "id": "L-TOOL-rustup",
+      "subject": "L-TOOL-rustup",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "rustup"
+      }
+    },
+    {
+      "id": "L-TOOL-cargo",
+      "subject": "L-TOOL-cargo",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "cargo"
+      }
+    },
+    {
+      "id": "L-TOOL-node",
+      "subject": "L-TOOL-node",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/node --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:24.873157+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "v22.23.1\n"
+      }
+    },
+    {
+      "id": "L-TOOL-npm",
+      "subject": "L-TOOL-npm",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/npm --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:25.251846+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "10.9.8\n"
+      }
+    },
+    {
+      "id": "L-TOOL-docker",
+      "subject": "L-TOOL-docker",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/sbin/docker --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:25.381075+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "Docker version 29.8.0, build 88096ef\n"
+      }
+    },
+    {
+      "id": "L-TOOL-hf",
+      "subject": "L-TOOL-hf",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "hf"
+      }
+    },
+    {
+      "id": "L-TOOL-huggingface-cli",
+      "subject": "L-TOOL-huggingface-cli",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "NOT_FOUND",
+        "scope": "current Fedora command resolution only",
+        "tool": "huggingface-cli"
+      }
+    },
+    {
+      "id": "L-TOOL-nvcc",
+      "subject": "L-TOOL-nvcc",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/local/cuda-13.4/bin/nvcc --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:25.453828+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Mon_Aug_03_13:24:11_PDT_2026\nCuda compilation tools, release 13.4, V13.4.59\nBuild cuda_13.4.r13.4/compiler.38657139_0\n"
+      }
+    },
+    {
+      "id": "L-DOCKER-ENGINE",
+      "subject": "L-DOCKER-ENGINE",
+      "state": "ERROR",
+      "confidence": 0.9,
+      "method": "docker version --format {{json .}}",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:25.476961+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "ERROR",
+        "exit_code": 1,
+        "output": "{\"Client\":{\"Platform\":{\"Name\":\"Docker Engine - Community\"},\"Version\":\"29.8.0\",\"ApiVersion\":\"1.56\",\"DefaultAPIVersion\":\"1.56\",\"GitCommit\":\"88096ef\",\"GoVersion\":\"go1.26.8\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"BuildTime\":\"Thu Sep  3 21:54:22 2026\",\"Context\":\"default\"},\"Server\":null}\npermission denied while trying to connect to the docker API at unix:///var/run/docker.sock\n"
+      }
+    },
+    {
+      "id": "L-GPU",
+      "subject": "L-GPU",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/usr/lib/wsl/lib/nvidia-smi --query-gpu=name,driver_version,memory.total,compute_cap --format=csv,noheader",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:44:25.566191+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "NVIDIA GeForce RTX 3050, 616.92, 6144 MiB, 8.6\n"
+      }
+    },
+    {
+      "id": "L-CUDA-DRIVER-API",
+      "subject": "L-CUDA-DRIVER-API",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "status": 0,
+        "driver_api_version": 13040
+      }
+    },
+    {
+      "id": "L-CUDNN",
+      "subject": "L-CUDNN",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "ctypes load lib + cudnnGetVersion; no handle/computation",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "runtime_version": 92501
+      }
+    },
+    {
+      "id": "L-ALTERNATE-PATHS",
+      "subject": "L-ALTERNATE-PATHS",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "existence checks of fixed conventional paths; no recursion",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "paths": {
+          "/opt/conda/bin/conda": false,
+          "<LINUX_HOME>/miniforge3/bin/conda": false,
+          "<LINUX_HOME>/anaconda3/bin/conda": false,
+          "<LINUX_HOME>/.cargo/bin/rustc": false,
+          "<LINUX_HOME>/.cargo/bin/cargo": false,
+          "/usr/local/go/bin/go": false,
+          "<LINUX_HOME>/.local/bin/hf": false
+        }
+      }
+    },
+    {
+      "id": "P-fedora-system",
+      "subject": "P-fedora-system",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:50.082726+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "fedora-system",
+        "path": "/usr/bin/python3",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "/usr/bin/python3",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.0.1",
+              "state": "OBSERVED"
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-system",
+      "subject": "P-windows-system",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:50.145970+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-system",
+        "path": "/mnt/c/Python314/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "C:\\Python314\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED"
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "version": "1.31.0",
+              "state": "OBSERVED"
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-preview",
+      "subject": "P-windows-preview",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:50.317777+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-preview",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/AppData/Local/Programs/Python/Python315/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.15.0b4",
+          "executable": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\Python\\Python315\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.1.2",
+              "state": "OBSERVED"
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-ai-cu132",
+      "subject": "P-windows-ai-cu132",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:50.614347+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-ai-cu132",
+        "path": "/mnt/c/AI/pytorch-cu132/Scripts/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "C:\\AI\\pytorch-cu132\\Scripts\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED"
+            },
+            "numpy": {
+              "version": "2.5.3",
+              "state": "OBSERVED"
+            },
+            "torch": {
+              "version": "2.14.0+cu132",
+              "state": "OBSERVED"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          },
+          "torch_probe": {
+            "version": "2.14.0+cu132",
+            "cuda_available": true,
+            "cuda_runtime": "13.2",
+            "cudnn_runtime": 92400,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-anaconda",
+      "subject": "P-windows-anaconda",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:53.008178+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-anaconda",
+        "path": "<WINDOWS_USER_HOME_DRIVE>/anaconda3/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.14.7",
+          "executable": "<WINDOWS_USER_HOME>\\anaconda3\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED"
+            },
+            "numpy": {
+              "version": "2.4.6",
+              "state": "OBSERVED"
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "jsonschema": {
+              "version": "4.26.0",
+              "state": "OBSERVED"
+            },
+            "conda": {
+              "version": "26.7.2",
+              "state": "OBSERVED"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-miniforge",
+      "subject": "P-windows-miniforge",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:53.184456+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-miniforge",
+        "path": "/mnt/c/pinokio/bin/miniforge/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.10.20",
+          "executable": "C:\\pinokio\\bin\\miniforge\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED"
+            },
+            "numpy": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "torch": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "version": "1.20.1",
+              "state": "OBSERVED"
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "conda": {
+              "version": "26.5.3",
+              "state": "OBSERVED"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-localai-cu133",
+      "subject": "P-windows-localai-cu133",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:53.379844+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-localai-cu133",
+        "path": "/mnt/c/LocalAI/venvs/pytorch-cuda133/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.12.14",
+          "executable": "C:\\LocalAI\\venvs\\pytorch-cuda133\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "version": "26.2.1",
+              "state": "OBSERVED"
+            },
+            "numpy": {
+              "version": "2.5.2",
+              "state": "OBSERVED"
+            },
+            "torch": {
+              "version": "2.15.0a0+gita6066c4",
+              "state": "OBSERVED"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "safetensors": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          },
+          "torch_probe": {
+            "version": "2.15.0a0+gita6066c4",
+            "cuda_available": true,
+            "cuda_runtime": "13.3",
+            "cudnn_runtime": null,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-daw-cu130",
+      "subject": "P-windows-daw-cu130",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:55.753148+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-daw-cu130",
+        "path": "/mnt/c/pinokio/api/theDAW-Pinokio.git/app/.venv/Scripts/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.12.13",
+          "executable": "C:\\pinokio\\api\\theDAW-Pinokio.git\\app\\.venv\\Scripts\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "numpy": {
+              "version": "2.5.3",
+              "state": "OBSERVED"
+            },
+            "torch": {
+              "version": "2.14.0+cu130",
+              "state": "OBSERVED"
+            },
+            "transformers": {
+              "version": "5.17.0",
+              "state": "OBSERVED"
+            },
+            "huggingface_hub": {
+              "version": "1.31.0",
+              "state": "OBSERVED"
+            },
+            "safetensors": {
+              "version": "0.8.0",
+              "state": "OBSERVED"
+            },
+            "jsonschema": {
+              "version": "4.26.0",
+              "state": "OBSERVED"
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          },
+          "torch_probe": {
+            "version": "2.14.0+cu130",
+            "cuda_available": true,
+            "cuda_runtime": "13.0",
+            "cudnn_runtime": 92400,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "P-windows-underfit-cu128",
+      "subject": "P-windows-underfit-cu128",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:58.111848+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "provider_id": "windows-underfit-cu128",
+        "path": "/mnt/c/pinokio/api/theDAW-Pinokio.git/app/underfit/.venv/Scripts/python.exe",
+        "exit_code": 0,
+        "state": "OBSERVED",
+        "data": {
+          "python": "3.10.20",
+          "executable": "C:\\pinokio\\api\\theDAW-Pinokio.git\\app\\underfit\\.venv\\Scripts\\python.exe",
+          "isolation": "-I -B: current directory/user-site excluded; bytecode writes disabled",
+          "packages": {
+            "pip": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "numpy": {
+              "version": "2.2.6",
+              "state": "OBSERVED"
+            },
+            "torch": {
+              "version": "2.7.1+cu128",
+              "state": "OBSERVED"
+            },
+            "transformers": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "huggingface_hub": {
+              "version": "1.15.0",
+              "state": "OBSERVED"
+            },
+            "safetensors": {
+              "version": "0.7.0",
+              "state": "OBSERVED"
+            },
+            "jsonschema": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "conda": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            },
+            "tensorrt": {
+              "state": "NOT_FOUND",
+              "scope": "this isolated interpreter metadata only"
+            }
+          },
+          "torch_probe": {
+            "version": "2.7.1+cu128",
+            "cuda_available": true,
+            "cuda_runtime": "12.8",
+            "cudnn_runtime": 90701,
+            "gpu_name": "NVIDIA GeForce RTX 3050",
+            "compute_capability": [
+              8,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "W-TOOL-git",
+      "subject": "W-TOOL-git",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:51.244311+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/Git/cmd/git.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "git version 2.55.0.windows.5\n"
+      }
+    },
+    {
+      "id": "W-TOOL-git-lfs",
+      "subject": "W-TOOL-git-lfs",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:51.301564+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/Git/cmd/git.exe",
+        "arguments": [
+          "lfs",
+          "version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)\n"
+      }
+    },
+    {
+      "id": "W-TOOL-gh",
+      "subject": "W-TOOL-gh",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:51.799773+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/GitHub CLI/gh.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "gh version 2.100.0 (2026-09-03)\nhttps://github.com/cli/cli/releases/tag/v2.100.0\n"
+      }
+    },
+    {
+      "id": "W-TOOL-cmake",
+      "subject": "W-TOOL-cmake",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:51.895197+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/CMake/bin/cmake.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n"
+      }
+    },
+    {
+      "id": "W-TOOL-clang",
+      "subject": "W-TOOL-clang",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:51.969616+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/LLVM/bin/clang.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "clang version 22.1.8 (https://github.com/llvm/llvm-project ca7933e47d3a3451d81e72ac174dcb5aa28b59d1)\nTarget: x86_64-pc-windows-msvc\nThread model: posix\nInstalledDir: C:\\Program Files\\LLVM\\bin\n"
+      }
+    },
+    {
+      "id": "W-TOOL-nvcc",
+      "subject": "W-TOOL-nvcc",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.026126+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.4/bin/nvcc.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Sun_Jul_12_11:26:23_Pacific_Standard_Time_2026\nCuda compilation tools, release 13.4, V13.4.46\nBuild cuda_13.4.r13.4/compiler.38501229_0\n"
+      }
+    },
+    {
+      "id": "W-TOOL-nvidia-smi",
+      "subject": "W-TOOL-nvidia-smi",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.068505+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Windows/System32/nvidia-smi.exe",
+        "arguments": [
+          "--query-gpu=name,driver_version,memory.total,compute_cap",
+          "--format=csv,noheader"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "NVIDIA GeForce RTX 3050, 616.92, 6144 MiB, 8.6\n"
+      }
+    },
+    {
+      "id": "W-TOOL-rustc",
+      "subject": "W-TOOL-rustc",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.129314+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "<WINDOWS_USER_HOME_DRIVE>/.cargo/bin/rustc.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "rustc 1.98.1 (48a229cea 2026-09-01)\n"
+      }
+    },
+    {
+      "id": "W-TOOL-cargo",
+      "subject": "W-TOOL-cargo",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.215305+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "<WINDOWS_USER_HOME_DRIVE>/.cargo/bin/cargo.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "cargo 1.98.1 (797e8a9bc 2026-08-05)\n"
+      }
+    },
+    {
+      "id": "W-TOOL-rustup",
+      "subject": "W-TOOL-rustup",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.296690+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "<WINDOWS_USER_HOME_DRIVE>/.cargo/bin/rustup.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "rustup 1.29.1 (d95a37b6a 2026-08-13)\ninfo: This is the version for the rustup toolchain manager, not the rustc compiler.\ninfo: the currently active `rustc` version is `rustc 1.98.1 (48a229cea 2026-09-01)`\n"
+      }
+    },
+    {
+      "id": "W-TOOL-node",
+      "subject": "W-TOOL-node",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.373221+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/nodejs/node.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "v26.8.1\n"
+      }
+    },
+    {
+      "id": "W-TOOL-conda",
+      "subject": "W-TOOL-conda",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.424553+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "<WINDOWS_USER_HOME_DRIVE>/anaconda3/Scripts/conda.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "conda 26.7.2\n"
+      }
+    },
+    {
+      "id": "W-TOOL-docker",
+      "subject": "W-TOOL-docker",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.579291+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "<WINDOWS_USER_HOME_DRIVE>/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "Docker version 29.7.2, build a7dcaa6\n"
+      }
+    },
+    {
+      "id": "W-TOOL-ninja",
+      "subject": "W-TOOL-ninja",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.666410+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "<WINDOWS_USER_HOME_DRIVE>/AppData/Local/Microsoft/WinGet/Links/ninja.exe",
+        "arguments": [
+          "--version"
+        ],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "1.13.2\n"
+      }
+    },
+    {
+      "id": "W-TOOL-msvc",
+      "subject": "W-TOOL-msvc",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.732000+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+        "arguments": [],
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "usage: cl [ option... ] filename... [ /link linkoption... ]\nMicrosoft (R) C/C++ Optimizing Compiler Version 19.51.36257 for x64\nCopyright (C) Microsoft Corporation.  All rights reserved.\n\n"
+      }
+    },
+    {
+      "id": "W-TOOL-hf-ai",
+      "subject": "W-TOOL-hf-ai",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.805796+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "/mnt/c/AI/pytorch-cu132/Scripts/hf.exe",
+        "arguments": [
+          "version"
+        ],
+        "state": "NOT_FOUND",
+        "scope": "this exact known installation path"
+      }
+    },
+    {
+      "id": "W-TOOL-hf-conda",
+      "subject": "W-TOOL-hf-conda",
+      "state": "NOT_FOUND",
+      "confidence": 0.65,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:45:52.807498+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "path": "<WINDOWS_USER_HOME_DRIVE>/anaconda3/Scripts/hf.exe",
+        "arguments": [
+          "version"
+        ],
+        "state": "NOT_FOUND",
+        "scope": "this exact known installation path"
+      }
+    },
+    {
+      "id": "W-HF-SYSTEM",
+      "subject": "W-HF-SYSTEM",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/mnt/c/Python314/Scripts/hf.exe version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:46:57.912245+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "[OK] hf version\n  version: 1.31.0\n"
+      }
+    },
+    {
+      "id": "W-HF-MINIFORGE",
+      "subject": "W-HF-MINIFORGE",
+      "state": "ERROR",
+      "confidence": 0.9,
+      "method": "/mnt/c/pinokio/bin/miniforge/Scripts/hf.exe version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:46:59.095987+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "ERROR",
+        "exit_code": 1,
+        "output": "Error: Invalid value. 'charmap' codec can't encode character '\\u2713' in position 5: character maps to <undefined>\nHint: set HF_DEBUG=1 as environment variable for full traceback.\n"
+      }
+    },
+    {
+      "id": "W-NPM",
+      "subject": "W-NPM",
+      "state": "ERROR",
+      "confidence": 0.9,
+      "method": "/mnt/c/Program Files/nodejs/node.exe /mnt/c/Program Files/nodejs/node_modules/npm/bin/npm-cli.js --version",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:46:59.918690+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "ERROR",
+        "exit_code": 1,
+        "output": "node:internal/modules/cjs/loader:1573\n  throw err;\n  ^\n\nError: Cannot find module '\\\\wsl.localhost\\FedoraLinux-44\\mnt\\c\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js'\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)\n    at Module._load (node:internal/modules/cjs/loader:1346:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v26.8.1\n"
+      }
+    },
+    {
+      "id": "W-CUDNN",
+      "subject": "W-CUDNN",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "/mnt/c/Python314/python.exe -I -B",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:47:00.006454+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "{\"runtime_version\": 92501}\n"
+      }
+    },
+    {
+      "id": "L-CUDNN-HEADER",
+      "subject": "L-CUDNN-HEADER",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed cudnn_version.h macro read",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "macros": [
+          "#define CUDNN_MAJOR 9",
+          "#define CUDNN_MINOR 25",
+          "#define CUDNN_PATCHLEVEL 1"
+        ]
+      }
+    },
+    {
+      "id": "L-USER-NAME",
+      "subject": "L-USER-NAME",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "fixed executable/path/package metadata probe; no recursive discovery",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "value": "<LINUX_USER>",
+        "redaction": "current user queried by id -un; value intentionally not exported"
+      }
+    },
+    {
+      "id": "W-NPM-NATIVE-PATH",
+      "subject": "W-NPM-NATIVE-PATH",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "node.exe with native Windows npm-cli.js path --version; initial Linux-style argument was a probe error",
+      "scope": "selected provider/command or named system query only",
+      "observed_at": "2026-09-14T03:48:21.664060+00:00",
+      "source": "Session 0 bounded local inventory",
+      "references": [],
+      "value": {
+        "state": "OBSERVED",
+        "exit_code": 0,
+        "output": "11.19.0\n"
+      }
+    },
+    {
+      "id": "W-OS",
+      "subject": "os",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: os",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": {
+        "Caption": "Microsoft Windows 10 Pro",
+        "Version": "10.0.19045",
+        "BuildNumber": "19045",
+        "OSArchitecture": "64-bit"
+      }
+    },
+    {
+      "id": "W-CPU",
+      "subject": "cpu",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: cpu",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": {
+        "Name": "AMD Ryzen 5 5600G with Radeon Graphics         ",
+        "NumberOfCores": 6,
+        "NumberOfLogicalProcessors": 12
+      }
+    },
+    {
+      "id": "W-SYSTEM",
+      "subject": "system",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: system",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": {
+        "TotalPhysicalMemory": 68047577088,
+        "SystemType": "x64-based PC"
+      }
+    },
+    {
+      "id": "W-RAM-MODULES",
+      "subject": "memory",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: memory",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": {
+        "Sum": 68719476736
+      }
+    },
+    {
+      "id": "W-GPU-CIM",
+      "subject": "gpu",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: gpu",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": [
+        {
+          "Name": "AMD Radeon(TM) Graphics",
+          "DriverVersion": "31.0.21925.1001"
+        },
+        {
+          "Name": "NVIDIA GeForce RTX 3050",
+          "DriverVersion": "32.0.16.1692"
+        }
+      ]
+    },
+    {
+      "id": "W-STORAGE",
+      "subject": "volumes",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: volumes",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": [
+        {
+          "Name": "C",
+          "Used": 437970350080,
+          "Free": 41324806144
+        }
+      ]
+    },
+    {
+      "id": "W-COMMANDS",
+      "subject": "commands",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: commands",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": [
+        {
+          "Name": "python.exe",
+          "Source": "C:\\Python314\\python.exe"
+        },
+        {
+          "Name": "python.exe",
+          "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\Python\\Python315\\python.exe"
+        },
+        {
+          "Name": "python.exe",
+          "Source": "<WINDOWS_USER_HOME>\\anaconda3\\python.exe"
+        },
+        {
+          "Name": "python.exe",
+          "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+        },
+        {
+          "Name": "git.exe",
+          "Source": "C:\\Program Files\\Git\\cmd\\git.exe"
+        },
+        {
+          "Name": "cmake.exe",
+          "Source": "C:\\Program Files\\CMake\\bin\\cmake.exe"
+        },
+        {
+          "Name": "clang.exe",
+          "Source": "C:\\Program Files\\LLVM\\bin\\clang.exe"
+        },
+        {
+          "Name": "nvcc.exe",
+          "Source": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.4\\bin\\nvcc.exe"
+        },
+        {
+          "Name": "docker.exe",
+          "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe"
+        },
+        {
+          "Name": "docker",
+          "Source": "<WINDOWS_USER_HOME>\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker"
+        }
+      ]
+    },
+    {
+      "id": "W-POWERSHELL",
+      "subject": "powershell",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: powershell",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": "5.1.19041.7725"
+    },
+    {
+      "id": "W-WSL-VERSION",
+      "subject": "wsl_version",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: wsl_version",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": "WSL version: 2.7.14.0\nKernel version: 6.18.33.2-2\nWSLg version: 1.0.73.2\nMSRDC version: 1.2.7214\nDirect3D version: 1.611.1-81528511\nDXCore version: 10.0.26100.1-240331-1435.ge-release\nWindows version: 10.0.19045.7725"
+    },
+    {
+      "id": "W-WSL-DISTROS",
+      "subject": "wsl_distros",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "method": "allowlisted CIM/PowerShell/WSL query: wsl_distros",
+      "scope": "current Windows host/user context",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": "NAME              STATE           VERSION\n* FedoraLinux-44    Running         2\ndocker-desktop    Running         2"
+    },
+    {
+      "id": "W-SCRIPT-POLICY",
+      "subject": "PowerShell invocation boundary",
+      "state": "ERROR",
+      "confidence": 0.99,
+      "method": "initial -File invocation of read-only probe",
+      "scope": "script-file policy only",
+      "observed_at": "2026-09-14T03:44:41.5507559Z",
+      "source": "Session 0 Windows interop",
+      "references": [],
+      "value": "File invocation was blocked by existing execution policy; inline read-only commands succeeded without changing policy."
+    },
+    {
+      "id": "V-CPU",
+      "subject": "CPU identity and logical count",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "Linux lscpu agrees with Windows CIM",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "L-CPU",
+        "W-CPU"
+      ],
+      "value": {
+        "model": "AMD Ryzen 5 5600G with Radeon Graphics",
+        "logical_processors": 12
+      }
+    },
+    {
+      "id": "V-WSL",
+      "subject": "Fedora WSL2 execution context",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "current registered Fedora instance only",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "L-OS",
+        "L-KERNEL",
+        "W-WSL-DISTROS"
+      ],
+      "value": {
+        "distro": "FedoraLinux-44",
+        "wsl_generation": 2
+      }
+    },
+    {
+      "id": "V-OS",
+      "subject": "Windows major/build identity",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "CIM build and WSL host-version report agree on 19045; full revision from WSL",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "W-OS",
+        "W-WSL-VERSION"
+      ],
+      "value": {
+        "caption": "Microsoft Windows 10 Pro",
+        "build": "10.0.19045.7725"
+      }
+    },
+    {
+      "id": "V-GPU",
+      "subject": "NVIDIA identity and compute capability",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "GPU model and capability cross-checked; VRAM from NVIDIA queries; no model inference",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "L-GPU",
+        "W-TOOL-nvidia-smi",
+        "W-GPU-CIM",
+        "P-windows-ai-cu132"
+      ],
+      "value": {
+        "name": "NVIDIA GeForce RTX 3050",
+        "vram_bytes": 6442450944,
+        "compute_capability": "8.6"
+      }
+    },
+    {
+      "id": "V-CUDNN-LINUX",
+      "subject": "native Linux cuDNN version",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "runtime version agrees with selected installation header; no convolution test",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "L-CUDNN",
+        "L-CUDNN-HEADER"
+      ],
+      "value": "9.25.1"
+    },
+    {
+      "id": "V-TORCH-windows-ai-cu132",
+      "subject": "framework package/runtime version",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "package metadata and imported runtime agree within named provider; CUDA availability remains an API observation",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "P-windows-ai-cu132"
+      ],
+      "value": "2.14.0+cu132"
+    },
+    {
+      "id": "V-TORCH-windows-localai-cu133",
+      "subject": "framework package/runtime version",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "package metadata and imported runtime agree within named provider; CUDA availability remains an API observation",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "P-windows-localai-cu133"
+      ],
+      "value": "2.15.0a0+gita6066c4"
+    },
+    {
+      "id": "V-TORCH-windows-daw-cu130",
+      "subject": "framework package/runtime version",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "package metadata and imported runtime agree within named provider; CUDA availability remains an API observation",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "P-windows-daw-cu130"
+      ],
+      "value": "2.14.0+cu130"
+    },
+    {
+      "id": "V-TORCH-windows-underfit-cu128",
+      "subject": "framework package/runtime version",
+      "state": "VERIFIED",
+      "confidence": 0.98,
+      "method": "independent probe consistency check",
+      "scope": "package metadata and imported runtime agree within named provider; CUDA availability remains an API observation",
+      "observed_at": "2026-09-14T03:51:26+00:00",
+      "source": "Session 0 consistency review",
+      "references": [
+        "P-windows-underfit-cu128"
+      ],
+      "value": "2.7.1+cu128"
+    }
+  ],
+  "security": {
+    "sanitized": true,
+    "secret_values_present": false,
+    "environment_values_dumped": false,
+    "path_placeholders": [
+      "<LINUX_HOME>",
+      "<LINUX_USER>",
+      "<WINDOWS_USER_HOME>",
+      "<WINDOWS_USER_HOME_DRIVE>",
+      "<WINDOWS_SHARED_PROJECTS>"
+    ],
+    "publication": "User explicitly authorized a public repository and sanitized baseline; raw authentication output excluded."
+  }
+}
