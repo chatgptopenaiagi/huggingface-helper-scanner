@@ -5,9 +5,10 @@
 - Project: **HHS**.
 - Full name: **HuggingFace Helper Scanner**.
 - Repository: **huggingface-helper-scanner**.
-- Current phase: **Phase 0 - Foundation**.
-- Session: **Session 0 - HHS Genesis**, 2026-09-13, America/Los_Angeles.
-- Status: **Session 0 COMPLETE / Phase 0 COMPLETE**, final review 2026-09-14. Session 1 has not started; stop here until a new explicitly scoped task.
+- Current phase: **Phase 1 - Hugging Face Repository Inspector**.
+- Session: **Session 1 - Repository Inspector V0**, 2026-09-14, America/Los_Angeles.
+- Status: **Session 1 COMPLETE / Phase 1 V0 COMPLETE**, with the failed live check documented and the EOF fix validated offline. Session 0 / Phase 0 remains COMPLETE. The user explicitly authorized Phase 1 only on 2026-09-14.
+- Session 1 starting commit: `b3068e6a68fd69193c226507c2d51a318edb12a5`; clean local main and remote main matched before implementation.
 - Actual local workspace: `/mnt/c/Codex-Projects/huggingface-helper-scanner`.
 - Windows equivalent: `C:\Codex-Projects\huggingface-helper-scanner`.
 - Workspace selection: existing shared parent passed a scoped write/read/remove test; fallback was unnecessary.
@@ -15,17 +16,17 @@
 - Visibility: **PUBLIC**. License: **not selected**.
 - Branch: `main`.
 - Initial foundation commit: `98d89c8760e1f61925cc5feb2d05dfb674add5e9` — the original paused checkpoint, preserved unchanged.
-- Latest commit: **current `HEAD`**, resolved with `git log -1 --format=%H`; a file cannot contain the hash of the commit containing itself. The completion commit follows the initial paused checkpoint; this is documentation completion, not a software release.
+- Latest commit: **current `HEAD`**, resolved with `git log -1 --format=%H`; a file cannot contain the hash of the commit containing itself. Session 0 completion is `b3068e6a68fd69193c226507c2d51a318edb12a5`; Session 1 uses normal forward history.
 
 ## Completed work
 
-Repository initialization; concept/theory/architecture; read-only and planning invariants; evidence taxonomy; agent-neutral manifest concept; draft JSON Schema and deliberately illustrative example; bounded Fedora/Windows development baseline; read-only review of known ARX architecture documents; security and contribution rules; roadmap issues for Phases 1–10; documentation-only placeholders under src, tests and GitHub workflow directories.
+Repository initialization; concept/theory/architecture; read-only and planning invariants; evidence taxonomy; agent-neutral manifest concept; draft JSON Schema and deliberately illustrative example; bounded Fedora/Windows development baseline; read-only review of known ARX architecture documents; security and contribution rules; roadmap issues for Phases 1–10; Session 0 documentation-only placeholders. Session 1 adds a standard-library Python repository metadata inspector, CLI, synthetic fixture, 29 tests and V0 snapshot validation. GitHub workflow remains documentation-only.
 
 The baseline is an independently collected session artifact, not output from an implemented HHS scanner. Review [ENVIRONMENT_BASELINE](docs/ENVIRONMENT_BASELINE.md) and [reports/dev-machine-baseline.json](reports/dev-machine-baseline.json) before reusing any machine fact.
 
 ## Unimplemented work
 
-All runtime phases: URL parser, repository inspector, probe engine, requirement extraction, reconciliation, planner, intent interpreter, agent adapters, manifest exporters, execution engine, CLI/executable, GUI, installation and automatic system changes. No model weights were downloaded. src contains only README.md.
+Machine probe engine, requirement extraction, compatibility reconciliation, planner, intent interpreter, agent adapters, stable manifest exporters, execution engine, packaged executable, GUI, installation and automatic system changes. Model-only repository metadata parsing/inspection and a Python module CLI now exist. No model weights or other repository file contents were downloaded.
 
 ## Fixed architectural decisions
 
@@ -49,13 +50,16 @@ No unresolved Session 0 content blocker remains. Historical probe failures below
 
 No packages or system components were intentionally modified. Existing failures/conflicts are preserved: Windows 10/build 19045 rather than historical Windows 11/build 28000; Ubuntu not in the current-user WSL list; Fedora Docker socket denial; Miniforge HF CLI output-encoding error; initial PowerShell script-policy rejection followed by successful inline read-only queries; initial Windows npm path error followed by a successful native-path retry.
 
-## Future objective only after formal Session 0 completion
+## Session 1 implementation and acceptance evidence
 
-**PHASE 1 / SESSION 1**
-**Hugging Face Repository Inspector V0**
+Python standard-library V0 supports owner/repo, tree, blob and resolve URL forms; recognizes dataset/Space families but returns UNSUPPORTED without network requests. One fixed model-info API response, no redirects/retries, 1 MiB response budget plus overflow sentinel, configurable bounded file count and socket/body-read timeout. No optional text retrieval was implemented. Snapshot IDs/provenance, requested/resolved revision, API-reported file/LFS metadata, inferred roles/framework hints, failure states, coverage and download accounting remain explicit.
 
-**HHS SESSION 1: HUGGING FACE REPOSITORY INSPECTOR V0**
+29 deterministic tests pass, including the real HTTP transport exercised through a fake connection, CLI offline output and structural/reference negative cases. No packages were installed. The one authorized live check of grichard99/statpredict-lite failed on a local EOF socket access bug before producing a snapshot. The bug was fixed and covered offline; no second live request was made. Live file names/sizes, repository fields and resolved revision remain UNKNOWN, and exact metadata bytes were not recovered. Model/file payload bytes are zero. See docs/HF_REPOSITORY_INSPECTOR_V0.md and reports/session-1-live-validation.json.
 
-Accept a Hugging Face URL and turn bounded repository metadata into structured evidence. Begin with public model repository metadata; recognize dataset/Space URLs and return explicit unsupported/unknown outcomes until their scope is deliberately added. Preserve requested/resolved revision, provenance and bounded failure states. Use fixtures first and an explicitly scoped metadata-only check if needed. Do not install anything, download model weights, execute repository code, implement the machine engine or advance the other roadmap phases.
+Remaining limitations: public model metadata only; conservative URL/path grammar; one metadata document; no text/config contents; no authentication, alias/redirect handling or retry; socket/body timeouts are not hard DNS/header wall-clock bounds; only the existing Fedora Python 3.14.7 was tested. The corrected transport has not yet passed a live acceptance check. These limitations are retained for human review; no machine compatibility verdict exists.
 
-On return, read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md in that order. Session 0 is complete; stop until a new authorized task. A roadmap issue is not permission to implement it now.
+## Exact next scope
+
+Stop at Phase 1. Final safety checks passed; the completion commit must be pushed normally and local/remote equality verified for the human handoff. A new explicitly authorized Phase 1 follow-up should repeat one bounded live metadata check after the EOF fix and review the snapshot. Phase 2 is not started or authorized. No environment scan, repair or installer follows automatically.
+
+On return read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md first, then check Git. The initial checkpoint and completed Session 0 commit remain ancestors; never rewrite them. No HHS license has been selected.

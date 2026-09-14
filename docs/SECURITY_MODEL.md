@@ -36,3 +36,10 @@ Uninstall/rollback limits and shared-package ownership must be designed before a
 ## Session 0 boundary evidence
 
 No system components were installed or modified; no model weights downloaded; ARX architecture was read only. An existing PowerShell policy blocked a script-file probe, so the same authorized read-only queries were submitted inline without changing policy. Git/project/report/issue writes are the explicitly requested output of this session.
+
+
+## Session 1 implemented controls
+
+Repository Inspector V0 uses one fixed HTTPS model-info endpoint with no credentials, cookies, proxy-environment reads, redirects or retries. It projects allowlisted metadata into JSON, drops arbitrary card text and error bodies, and redacts recognizable credential-like strings. It has byte/file/request limits and socket/body-read timeouts. No file-content endpoint exists, including for README/configuration; every file has downloaded=false. The CPython transport has OS DNS/header wall-clock limitations documented in [Inspector V0](HF_REPOSITORY_INSPECTOR_V0.md).
+
+The one live request stayed on the metadata API and encountered a local EOF bug, fixed with an offline regression test. No model payloads, installations, remote code execution, credentials inspection, machine scans or system changes occurred. Snapshot redaction remains defense in depth, not proof of universal secret detection.

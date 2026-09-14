@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — 2026-09-14 — Session 1
+
+- Added the Python standard-library Repository Inspector V0, conservative URL parser, bounded credential-free model metadata client, JSON CLI and evidence validation.
+- Added a synthetic fixture and 29 deterministic tests for parser, metadata/LFS, failures, transport, security and CLI behavior.
+- Recorded the failed single live validation and an offline-tested EOF fix; corrected transport has not been retested live.
+- No file payloads, dependency installs, machine scans, compatibility reasoning or Phase 2 implementation.
+
 ## Unreleased — 2026-09-14 — Session 0 complete
 
 - Completed the final foundation review and superseded the paused handoff; preserved the initial checkpoint and all JSON artifacts.

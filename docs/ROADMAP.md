@@ -5,7 +5,7 @@ These are directional stages, not delivery dates or permission to implement futu
 | Phase | Direction | Exit evidence / boundary |
 |---|---|---|
 | 0 — complete | Foundation, theory, GitHub, security/evidence model and baseline | Reviewed docs/schema/example/baseline, planning issues, clean pushed repository; no software |
-| 1 | Hugging Face Repository Inspector V0 | URL to bounded metadata evidence; revisions/failures/coverage; no installs or weights |
+| 1 — V0 complete | Hugging Face Repository Inspector V0 | URL to bounded metadata evidence; revisions/failures/coverage; no installs or weights |
 | 2 | Local Machine Probe Engine | Named scope, trusted provider probes, timeouts, redaction and precise non-detection |
 | 3 | Requirement Extraction and Normalization | Sourced constraints, alternatives, conflicts and explicit unknowns |
 | 4 | Compatibility and Reconciliation Engine | Selected-context verdicts with explainable evidence/rules and resource uncertainty |
@@ -37,10 +37,8 @@ Windows/WSL separation is modeled now, even though broad multi-environment suppo
 
 Each issue describes a future goal, boundaries and acceptance evidence. None was implemented in Session 0.
 
-## Future scope — requires new authorization
+## Session 1 scope and next authorization
 
-**PHASE 1 / SESSION 1 — Hugging Face Repository Inspector V0**
+Repository Inspector V0 implements bounded model repository metadata with fixtures, evidence, limits and a JSON CLI. Dataset/Space URL forms are recognized but inspection is unsupported. No file contents, machine engine, compatibility engine or executor.
 
-**HHS SESSION 1: HUGGING FACE REPOSITORY INSPECTOR V0**
-
-Inspect a Hugging Face URL and produce structured repository metadata evidence without installing or downloading model weights. Begin with public model metadata, preserve revision/type/provenance, use bounded pagination/timeouts, and distinguish inaccessible, absent, unsupported and failed. No full requirements engine, machine engine or executor is part of this first slice.
+The one live acceptance attempt failed on a local EOF bug; the fix passed offline regression coverage. Recommended next authorized objective: a Phase 1 follow-up to repeat one bounded live check and review its snapshot. Stop until that new task. Phase 2 remains unstarted and is not an automatic continuation.

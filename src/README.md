@@ -1,7 +1,5 @@
-# Future source structure — documentation only
+# HHS source
 
-No HHS implementation exists in this directory. No language, package manager or CLI framework is selected.
+`hhs` is the Session 1 Python standard-library Repository Inspector V0. Modules cover CLI, conservative URL parsing, one bounded model metadata request, allowlisted file metadata, evidence and snapshot validation. Run with process-local `PYTHONPATH=src python3 -B -m hhs inspect-hf <URL>` from the repository root; no installation required.
 
-Potential modules are intent/URL parsing, repository inspection, machine probes, evidence/domain types, requirement normalization, reconciliation, planning and manifest export. An optional future executor must have a separate explicit authorization boundary; it must not be imported as a hidden side effect of discovery.
-
-The proposed next slice is Repository Inspector V0 only; it requires a new explicitly authorized task. Define its public input/output, budgets, failure model and fixtures before writing code. Do not create empty implementation packages or scaffold the entire pipeline just to mirror this conceptual list.
+See [Inspector V0](../docs/HF_REPOSITORY_INSPECTOR_V0.md). No machine engine, compatibility reasoning, file downloader or executor is implemented. Stop at Phase 1.

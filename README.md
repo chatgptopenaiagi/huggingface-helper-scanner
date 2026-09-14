@@ -2,7 +2,13 @@
 
 **HuggingFace Helper Scanner**
 
-**Status: SESSION 0 / PHASE 0 COMPLETE — foundation only.** No HHS application, CLI, scanner, installer or executable exists yet. This repository contains the Session 0 architecture, project memory, a manually collected development baseline and a draft manifest contract.
+**Status: SESSION 1 COMPLETE — Repository Inspector V0 ready for human review.** HHS now has a Python standard-library CLI for bounded public Hugging Face model repository metadata. It does not inspect machine compatibility, fetch file contents or install anything. Session 0 artifacts remain unchanged.
+
+```bash
+PYTHONPATH=src python3 -B -m hhs inspect-hf https://huggingface.co/owner/repo
+```
+
+See [Inspector V0 documentation](docs/HF_REPOSITORY_INSPECTOR_V0.md) for offline fixtures, limits, JSON evidence and known limitations. The single Session 1 live check failed on an EOF-handling defect, subsequently fixed and tested offline; see the [validation record](reports/session-1-live-validation.json).
 
 > **DISCOVER != MODIFY**
 > **PLAN != EXECUTE**
@@ -41,7 +47,7 @@ Scanning is read-only by default. Future installation/configuration belongs to a
 
 ## Read first
 
-1. [RESUME.md](RESUME.md): completed Session 0 handoff and stop boundary.
+1. [RESUME.md](RESUME.md): current handoff and stop boundary.
 2. [PROJECT_STATE.md](PROJECT_STATE.md): current phase, workspace, completed/unimplemented work and next task.
 3. [Session log](docs/SESSION_LOG.md): where development stopped.
 4. [Roadmap](docs/ROADMAP.md): future phases and GitHub issues.
@@ -53,14 +59,12 @@ Scanning is read-only by default. Future installation/configuration belongs to a
 - [ARX relationship](docs/ARX_RELATIONSHIP.md): read-only architectural comparison, no copied source.
 - [Environment baseline](docs/ENVIRONMENT_BASELINE.md) and [sanitized JSON](reports/dev-machine-baseline.json): real, bounded Session 0 observations, not an HHS product scan.
 - [Manifest concept](docs/HHS_MANIFEST_CONCEPT.md), [draft schema](schemas/hhs-manifest-draft.schema.json) and [illustrative example](examples/example-hhs-manifest.json). The example is **NOT a real scan**.
-- [Agent interoperability](docs/AGENT_INTEROPERABILITY.md), [future source layout](src/README.md) and [future test strategy](tests/README.md).
+- [Agent interoperability](docs/AGENT_INTEROPERABILITY.md), [source layout](src/README.md) and [test strategy](tests/README.md).
 
 Repository: https://github.com/chatgptopenaiagi/huggingface-helper-scanner
 
 Public visibility does not select a software license. **No license is selected in Session 0.** Licensing will be decided in a future session; there is intentionally no LICENSE file. See [CONTRIBUTING](CONTRIBUTING.md).
 
-## Future session — requires new authorization
+## Stop boundary
 
-**HHS SESSION 1: HUGGING FACE REPOSITORY INSPECTOR V0**
-
-Initially learn to inspect a Hugging Face URL and turn repository metadata into structured evidence, **without installing anything or downloading model weights**. This future task was not implemented in Session 0.
+Phase 1 only. The recommended next authorized task is a Phase 1 follow-up to repeat the bounded live metadata check after the EOF fix and review its snapshot. Phase 2, compatibility scans, installers and execution remain unstarted and require separate authorization.

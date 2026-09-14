@@ -1,6 +1,6 @@
 # Architecture
 
-**Proposed modules and contracts. None of the pipeline is implemented.**
+**Session 1 implements the bounded URL → model metadata → repository snapshot slice only. The broader pipeline below remains proposed.**
 
 ```mermaid
 flowchart TD
@@ -45,8 +45,12 @@ Repository content, README instructions, model code and agent responses are untr
 
 Keep raw private observations local only if safe; public outputs should contain a minimized canonical projection with evidence scope. External AI export is opt-in and redacted. A secret filter is not a substitute for collecting less data.
 
-## Session 1 boundary
+## Implemented Session 1 slice
 
-Only repository metadata inspection is next. No machine probe engine or model download is needed for Inspector V0. Initial public model metadata support can coexist with explicit unsupported results for dataset/Space types. Define budgets and fixtures before coding; defer package installation and framework selection if existing tooling suffices.
+The Python standard-library modules are `hhs.hf.url_parser` (safe identity and revision grammar), `hhs.hf.client` (one bounded model-info API request), `hhs.hf.inspector` (allowlisted metadata, inert file classifications, evidence and V0 validation) and `hhs.cli` (JSON output). No Hugging Face SDK dependency, file downloader, machine engine or executor exists.
 
-Primary references reviewed on 2026-09-13: [Hugging Face Hub API](https://huggingface.co/docs/hub/api) and [Hub repositories](https://huggingface.co/docs/hub/repositories-getting-started). They establish a starting point for metadata/type/revision research, not a tested HHS implementation.
+A single model-info document supplies repository and sibling file/LFS metadata under one resolved commit. File/page/byte coverage limits are explicit. Dataset/Space URLs are recognized but unsupported for inspection. README/configuration files have metadata only, with all content fetching absent. The V0 snapshot is separate from the unchanged Session 0 draft manifest.
+
+See [Inspector V0](HF_REPOSITORY_INSPECTOR_V0.md) for endpoint, bounds, URL grammar, evidence semantics and transport limitations. Fixture tests pass; the one live attempt exposed an EOF bug that was fixed and regression-tested offline. A new live acceptance check requires a new authorized Phase 1 follow-up. Phase 2 is not started.
+
+Primary references reviewed: [Hugging Face Hub API](https://huggingface.co/docs/hub/api) and [HfApi metadata reference](https://huggingface.co/docs/huggingface_hub/package_reference/hf_api), 2026-09-14. These inform the transport contract; they do not establish compatibility or authorize remote-code execution.

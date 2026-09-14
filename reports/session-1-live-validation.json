@@ -1,0 +1,46 @@
+{
+  "report_format": "hhs-session-1-live-validation-0.1",
+  "recorded_at": "2026-09-14T18:02:09.511507+00:00",
+  "artifact_kind": "manual_validation_record",
+  "target": "https://huggingface.co/grichard99/statpredict-lite",
+  "requested_revision": null,
+  "effective_revision": "main",
+  "resolved_revision": null,
+  "request_url": "https://huggingface.co/api/models/grichard99/statpredict-lite/revision/main?blobs=true",
+  "status": "ERROR",
+  "failure": {
+    "code": "LOCAL_IMPLEMENTATION_ERROR",
+    "type": "AttributeError",
+    "reason": "The body-read loop attempted to access response.fp.raw after HTTPResponse closed at Content-Length EOF.",
+    "fix": "Stop the body loop when response.fp is None; covered by offline EOF regression test.",
+    "live_revalidated_after_fix": false
+  },
+  "metadata_observed": {
+    "http_status": 200,
+    "content_type": "application/json",
+    "repository_fields": null,
+    "files": null,
+    "note": "Transport reached the JSON-body read loop, but no repository snapshot was emitted; buffered content was not recovered."
+  },
+  "accounting": {
+    "network_requests_attempted": 1,
+    "retries": 0,
+    "response_byte_limit": 1048576,
+    "max_files": 200,
+    "timeout_seconds": 10,
+    "metadata_body_bytes_retrieved": null,
+    "metadata_body_bytes_upper_bound": 1048577,
+    "model_payload_bytes_retrieved": 0,
+    "file_content_bytes_retrieved": 0,
+    "note": "Exact body count lost with failed invocation; unknown is not zero. The only request was model-info metadata."
+  },
+  "security": {
+    "model_weights_downloaded": false,
+    "repository_code_executed": false,
+    "packages_installed": false,
+    "credentials_used": false,
+    "machine_or_system_environment_modified": false
+  },
+  "weight_confirmation": "No model.safetensors or other file content endpoint was requested; file presence itself remains unobserved.",
+  "next_scope": "Stop. A new explicitly authorized Phase 1 follow-up may repeat one bounded live check; Phase 2 not started."
+}

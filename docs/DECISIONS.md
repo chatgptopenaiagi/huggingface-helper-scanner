@@ -15,3 +15,11 @@
 | D-11 | DEFERRED / 2026-09-13 | Implementation language, dependencies, CLI/UI, executor design | Existing developer tools are evidence, not a stack decision |
 
 For a future major decision, record ID/date, proposed/accepted/superseded status, owner, context, alternatives, evidence, consequences and revisit trigger. Preserve superseded history. No source-reuse or license choice is implied by ARX's local presence.
+
+
+## Session 1 decisions — 2026-09-14
+
+- D-12, SELECTED: existing Python standard library with a src layout and process-local PYTHONPATH; no package installation or SDK dependency. Only the current Fedora Python provider was tested.
+- D-13, SELECTED: one bounded model-info response with file/LFS metadata; no optional README/config contents, redirects, retries or pagination traversal. Dataset/Space URL recognition returns explicit unsupported inspection.
+- D-14, DRAFT: repository snapshot 0.1 is separate from the unchanged Session 0 manifest draft. Runtime structural/reference validation is standard-library code, not a new Manifest V1 commitment.
+- D-15, RECORDED: single live validation failed at local HTTP EOF handling. Fix regression-tested offline; preserve the failure and request a newly scoped live follow-up rather than silently making another call. Phase 2 remains unstarted.

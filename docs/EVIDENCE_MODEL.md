@@ -29,3 +29,10 @@ In this baseline, CPU identity is cross-checked between Linux and Windows; GPU i
 PRESENT/MISSING describe availability at a stated scope. COMPATIBLE/INCOMPATIBLE compare known requirements with a named provider/context. OPTIONAL/RECOMMENDED express policy or requirement importance. BLOCKING describes consequence. UNKNOWN/UNVERIFIED retain uncertainty. A missing optional component need not block anything; a present incompatible provider can still block the chosen context.
 
 Conflicts are retained as linked competing evidence. Prefer a suitable current observation over an old hint only for the fact actually queried. Do not globally discard useful historical context or repair the machine to match it. Unknown requirements, incomplete API pages and failed probes must remain visible to consumers.
+
+
+## Session 1 repository evidence
+
+V0 keeps API metadata OBSERVED, URL inputs UNVERIFIED and filename/framework/family hints INFERRED. Each snapshot observation identifies its API URL, requested/resolved revision, timestamp and scope. Metadata/file observations refer to the response-body SHA-256; file rows and derived hints reference their evidence IDs. API-reported sizes and LFS hashes are not independently verified payloads. Offline fixtures are explicitly synthetic, even when testing the OBSERVED code path.
+
+See [Inspector V0](HF_REPOSITORY_INSPECTOR_V0.md). The manual live-validation record preserves a failed invocation, unknown repository values and unknown exact metadata bytes. No API claim was recovered from that failed run, and unknown bytes are not reported as zero.

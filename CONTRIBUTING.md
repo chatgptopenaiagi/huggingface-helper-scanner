@@ -1,6 +1,6 @@
 # Contributing
 
-HHS is in Phase 0 - Foundation. Read README.md, PROJECT_STATE.md, docs/SESSION_LOG.md and docs/ROADMAP.md before proposing work. No implementation should be inferred from the existence of src or a roadmap issue.
+HHS has a Phase 1 repository metadata inspector; later phases require explicit scope. Read README.md, PROJECT_STATE.md, docs/SESSION_LOG.md and docs/ROADMAP.md before proposing work. No implementation should be inferred from the existence of src or a roadmap issue.
 
 ## Engineering loop
 

@@ -1,6 +1,6 @@
 # Session log
 
-Current status: **Session 0 COMPLETE / Phase 0 COMPLETE**. The historical pause below is superseded by the final review entry. Session 1 has not started.
+Current status: **Session 1 COMPLETE / Phase 1 V0 COMPLETE**, with documented live failure and offline EOF regression fix. Session 0 remains COMPLETE; Phase 2 is not started.
 
 ## Session 0 - HHS Genesis
 
@@ -90,3 +90,43 @@ An initial documentation read used `schema/*` instead of `schemas/*` and returne
 Publication procedure for this completion commit: review the final diff, create a normal follow-up commit, push `main` without force, then verify remote `refs/heads/main` equals local `HEAD`, the parent is the checkpoint, and the working tree is clean. The post-push result and exact completion hash belong in the final human report; this entry does not claim a push happened before the commit existed.
 
 **Exact next scope: stop.** A later new authorized task may start **HHS SESSION 1: HUGGING FACE REPOSITORY INSPECTOR V0**, initially bounded public-model metadata only. Roadmap issues do not authorize execution. No implementation, package installation, environment repair, model download or Phase 1 activity occurred during completion.
+
+
+## Session 1 — Repository Inspector V0 started
+
+2026-09-14. Read the nine required startup documents and verified clean `main`, origin identity and matching local/remote `b3068e6a68fd69193c226507c2d51a318edb12a5`. Updated project state before implementation. Scope: standard-library Python repository metadata only, deterministic fixtures/tests, CLI and one bounded live check of grichard99/statpredict-lite. No Phase 2, installations, model payloads or environment changes.
+
+
+## Session 1 — Completion and human review handoff
+
+Date: **2026-09-14**, America/Los_Angeles. **Session 1 COMPLETE / Phase 1 V0 COMPLETE** under the authorized gate permitting either a successful live check or a documented failure. The corrected transport has not passed a second live check; this limitation is explicit. Phase 2 is not started.
+
+### Scope and implementation
+
+Starting commit: `b3068e6a68fd69193c226507c2d51a318edb12a5`, verified clean on local/remote main. Initial checkpoint remains `98d89c8760e1f61925cc5feb2d05dfb674add5e9`. Final Session 1 commit is `HEAD`, recorded externally after push; no self-containing hash, amend or force push.
+
+Built standard-library Python URL parsing, revision identity, one-response model metadata inspection, file-size/LFS projection, inferred roles/framework/family hints, provenance and V0 snapshot validation. Added module CLI with JSON output, bounded options, offline fixtures and exclusive output creation. Dataset/Space families return structured UNSUPPORTED. No optional text-file retrieval was added: README/configs and all weight/adapter formats are metadata-only. Snapshot format remains separate from the unchanged Session 0 schema/example/baseline.
+
+### Tests and observed failures
+
+Fixture-first sequence: wrote synthetic model-info fixture and parser/metadata/security tests, then ran unittest before implementation; the expected initial failure was ModuleNotFoundError for the not-yet-created module. Implemented the component; 17 tests passed. Expanded transport/CLI/redaction tests; 27 passed before the single live invocation. The live run exposed HTTPResponse closing its file/socket at Content-Length EOF, causing AttributeError on the next loop. Fixed the EOF guard and added an offline regression that closes the fake response exactly at EOF; 28 tests passed. Strengthened raw-transport route refusal; final **29 tests pass**, with additional parameterized subtests.
+
+Final test command: `PYTHONPATH=src python3 -B -m unittest discover -s tests -v` using existing Python 3.14.7. No packages or test framework installed. Tests cover supported/unsafe URLs, revision conflicts, metadata/files/LFS, private/gated/404/429/timeouts, malformed responses, byte/file/page/request bounds, content-route refusal at client and transport levels, inert model-card commands, redaction, snapshot structure/references, CLI/offline mode, no-overwrite, HTTP headers, EOF and partial-byte timeout accounting. CLI-generated offline example validates and records six synthetic files, four evidence records, zero network attempts and zero file/model payload bytes.
+
+The one authorized live command was `PYTHONPATH=src python3 -B -m hhs inspect-hf https://huggingface.co/grichard99/statpredict-lite --max-files 200 --timeout 10 --output reports/session-1-statpredict-lite.json`. It failed before creating that output file. The sole requested endpoint was model-info `/api/models/grichard99/statpredict-lite/revision/main?blobs=true`. No file-content endpoint, CDN, LFS or model.safetensors request occurred. Metadata reached the JSON-body loop (HTTP 200/application-json), but no repository snapshot or exact body count survived the invocation. Fields, file names/sizes and resolved revision therefore remain UNKNOWN. A separate manual record preserves this in reports/session-1-live-validation.json. No second live request was made. The next newly authorized task should recheck the fixed transport live.
+
+The official OpenAPI Markdown documentation reader returned an internal error; the official Hugging Face Hub API and HfApi reference were read instead. No SDK code was installed or executed. No machine/provider probes were repeated. Historical Session 0 failures remain unchanged, not repaired.
+
+### File inventory and publication review
+
+Created: src/hhs/__init__.py, src/hhs/__main__.py, src/hhs/cli.py, src/hhs/hf/__init__.py, src/hhs/hf/url_parser.py, src/hhs/hf/client.py, src/hhs/hf/inspector.py; tests/test_inspector.py, tests/test_transport_cli.py, tests/fixtures/model.json; docs/HF_REPOSITORY_INSPECTOR_V0.md; reports/session-1-live-validation.json; examples/repository-snapshot-v0.json.
+
+Modified: AGENTS.md, PROJECT_STATE.md, RESUME.md, README.md, CHANGELOG.md, CONTRIBUTING.md; docs/ARCHITECTURE.md, docs/DECISIONS.md, docs/EVIDENCE_MODEL.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md, docs/SESSION_LOG.md; src/README.md, tests/README.md, reports/README.md, examples/README.md.
+
+Publication review passed across 43 text files and 55 local Markdown targets, with nine ignore-rule cases: JSON/Python syntax and generated snapshot validation; Markdown target checks; text/size review; count-only recognizable secret/private-home checks; AST checks excluding subprocess, dynamic execution, inspected-code imports and ML/SDK loaders in production source; source route/header review; foundation byte comparison; ignore rules and git diff whitespace review. The one credential-URL pattern hit is the deliberately synthetic `user:password` parser test, never a real credential. No raw live response, authentication output, private-home value, weight payload or executable artifact is included. Pattern/static checks have documented limits and are not proofs of universal safety.
+
+Sources: user-authorized scope, foundation memory, official API references, synthetic fixtures, unittest/CLI outputs, one failed live invocation and Git state. Runtime validation does not claim model compatibility or independently verified repository claims. Direct transport has a socket timeout and body deadline, but no hard OS-DNS/header wall-clock deadline. No credentials or proxy environment are read. No packages, models, repository code, machine/system changes, Windows/Fedora/WSL repairs or ARX modifications occurred. No license selected.
+
+Publication: normal forward `feat: add Hugging Face Repository Inspector V0` commit on main, then normal push and remote/main/HEAD/clean-state verification. Post-push identity belongs in the final human report because this commit cannot contain its own hash.
+
+**Exact next recommended authorized objective:** a Phase 1 follow-up to repeat one bounded live metadata-only validation against grichard99/statpredict-lite after the EOF fix and review the JSON evidence. Stop here until that new task. No Phase 2 machine engine, compatibility reconciliation, installer or executor work is authorized by this handoff.

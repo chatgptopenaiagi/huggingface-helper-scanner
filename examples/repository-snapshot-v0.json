@@ -1,0 +1,320 @@
+{
+  "snapshot_format": "hhs-repository-snapshot-0.1",
+  "hhs_inspector_version": "0.1.0",
+  "generated_at": "2026-09-14T18:06:08.304432+00:00",
+  "mode": "offline_fixture",
+  "status": "OK",
+  "source": {
+    "provider": "huggingface",
+    "host": "huggingface.co",
+    "repo_type": "model",
+    "repo_id": "example-owner/example-model",
+    "owner": "example-owner",
+    "name": "example-model",
+    "requested_revision": null,
+    "effective_revision": "main",
+    "requested_path": null,
+    "resolved_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "repository": {
+    "private": false,
+    "gated": false,
+    "library_name": "transformers",
+    "pipeline_tag": "text-generation",
+    "tags": [
+      "transformers",
+      "safetensors",
+      "llama",
+      "license:apache-2.0"
+    ],
+    "license": "apache-2.0",
+    "evidence_refs": [
+      "HF-0002"
+    ]
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "type": "file",
+      "extension": "md",
+      "size_bytes": 999999999,
+      "blob_id": null,
+      "lfs": null,
+      "lfs_status": "NOT_REPORTED",
+      "role": "documentation",
+      "role_state": "INFERRED",
+      "format": "md",
+      "downloaded": false,
+      "content_policy": "METADATA_ONLY",
+      "evidence_refs": [
+        "HF-0003"
+      ],
+      "role_evidence_refs": [
+        "HF-0004"
+      ]
+    },
+    {
+      "path": "config.json",
+      "type": "file",
+      "extension": "json",
+      "size_bytes": 128,
+      "blob_id": null,
+      "lfs": null,
+      "lfs_status": "NOT_REPORTED",
+      "role": "configuration",
+      "role_state": "INFERRED",
+      "format": "json",
+      "downloaded": false,
+      "content_policy": "METADATA_ONLY",
+      "evidence_refs": [
+        "HF-0003"
+      ],
+      "role_evidence_refs": [
+        "HF-0004"
+      ]
+    },
+    {
+      "path": "tokenizer.json",
+      "type": "file",
+      "extension": "json",
+      "size_bytes": 500,
+      "blob_id": null,
+      "lfs": null,
+      "lfs_status": "NOT_REPORTED",
+      "role": "tokenizer",
+      "role_state": "INFERRED",
+      "format": "json",
+      "downloaded": false,
+      "content_policy": "METADATA_ONLY",
+      "evidence_refs": [
+        "HF-0003"
+      ],
+      "role_evidence_refs": [
+        "HF-0004"
+      ]
+    },
+    {
+      "path": "model.safetensors",
+      "type": "file",
+      "extension": "safetensors",
+      "size_bytes": 123456789,
+      "blob_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "lfs": {
+        "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "size_bytes": 123456789,
+        "pointer_size_bytes": 134
+      },
+      "lfs_status": "REPORTED",
+      "role": "model_weight",
+      "role_state": "INFERRED",
+      "format": "safetensors",
+      "downloaded": false,
+      "content_policy": "METADATA_ONLY",
+      "evidence_refs": [
+        "HF-0003"
+      ],
+      "role_evidence_refs": [
+        "HF-0004"
+      ]
+    },
+    {
+      "path": "adapter_model.bin",
+      "type": "file",
+      "extension": "bin",
+      "size_bytes": 4096,
+      "blob_id": null,
+      "lfs": null,
+      "lfs_status": "NOT_REPORTED",
+      "role": "adapter",
+      "role_state": "INFERRED",
+      "format": "bin",
+      "downloaded": false,
+      "content_policy": "METADATA_ONLY",
+      "evidence_refs": [
+        "HF-0003"
+      ],
+      "role_evidence_refs": [
+        "HF-0004"
+      ]
+    },
+    {
+      "path": "remote_code.py",
+      "type": "file",
+      "extension": "py",
+      "size_bytes": 300,
+      "blob_id": null,
+      "lfs": null,
+      "lfs_status": "NOT_REPORTED",
+      "role": "source_code",
+      "role_state": "INFERRED",
+      "format": "py",
+      "downloaded": false,
+      "content_policy": "METADATA_ONLY",
+      "evidence_refs": [
+        "HF-0003"
+      ],
+      "role_evidence_refs": [
+        "HF-0004"
+      ]
+    }
+  ],
+  "derived": {
+    "weight_formats": [
+      "bin",
+      "safetensors"
+    ],
+    "possible_frameworks": [
+      "transformers"
+    ],
+    "possible_model_families": [
+      "llama"
+    ],
+    "config_files": [
+      "config.json"
+    ],
+    "documentation_files": [
+      "README.md"
+    ],
+    "state": "INFERRED",
+    "evidence_refs": [
+      "HF-0004"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "HF-0001",
+      "subject": "repository input",
+      "state": "UNVERIFIED",
+      "confidence": 0.0,
+      "source": "synthetic_fixture",
+      "method": "deterministic URL parsing",
+      "scope": "requested repository metadata only; no content or machine inspection",
+      "observed_at": "2026-09-14T18:06:08.304577+00:00",
+      "url": null,
+      "repo_id": "example-owner/example-model",
+      "requested_revision": null,
+      "resolved_revision": null,
+      "references": [],
+      "value": {
+        "provider": "huggingface",
+        "host": "huggingface.co",
+        "repo_type": "model",
+        "repo_id": "example-owner/example-model",
+        "owner": "example-owner",
+        "name": "example-model",
+        "requested_revision": null,
+        "effective_revision": "main",
+        "requested_path": null,
+        "resolved_revision": null
+      }
+    },
+    {
+      "id": "HF-0002",
+      "subject": "repository metadata",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "source": "synthetic_fixture",
+      "method": "bounded metadata response",
+      "scope": "requested repository metadata only; no content or machine inspection",
+      "observed_at": "2026-09-14T18:06:08.305321+00:00",
+      "url": "https://huggingface.co/api/models/example-owner/example-model/revision/main?blobs=true",
+      "repo_id": "example-owner/example-model",
+      "requested_revision": null,
+      "resolved_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "references": [],
+      "value": {
+        "fields": {
+          "private": false,
+          "gated": false,
+          "library_name": "transformers",
+          "pipeline_tag": "text-generation",
+          "tags": [
+            "transformers",
+            "safetensors",
+            "llama",
+            "license:apache-2.0"
+          ],
+          "license": "apache-2.0",
+          "evidence_refs": [
+            "HF-0002"
+          ]
+        },
+        "response_sha256": "afd77c97adeb220258f0264ed08cf73d9f6dbf7cc4ab0d4d5e17d523b2edeadb"
+      }
+    },
+    {
+      "id": "HF-0003",
+      "subject": "file metadata",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "source": "synthetic_fixture",
+      "method": "bounded metadata response",
+      "scope": "requested repository metadata only; no content or machine inspection",
+      "observed_at": "2026-09-14T18:06:08.305329+00:00",
+      "url": "https://huggingface.co/api/models/example-owner/example-model/revision/main?blobs=true",
+      "repo_id": "example-owner/example-model",
+      "requested_revision": null,
+      "resolved_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "references": [
+        "HF-0002"
+      ],
+      "value": {
+        "reported_count": 6,
+        "retained_count": 6,
+        "response_sha256": "afd77c97adeb220258f0264ed08cf73d9f6dbf7cc4ab0d4d5e17d523b2edeadb"
+      }
+    },
+    {
+      "id": "HF-0004",
+      "subject": "filename and metadata classification",
+      "state": "INFERRED",
+      "confidence": 0.5,
+      "source": "synthetic_fixture",
+      "method": "bounded metadata response",
+      "scope": "requested repository metadata only; no content or machine inspection",
+      "observed_at": "2026-09-14T18:06:08.305332+00:00",
+      "url": "https://huggingface.co/api/models/example-owner/example-model/revision/main?blobs=true",
+      "repo_id": "example-owner/example-model",
+      "requested_revision": null,
+      "resolved_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "references": [
+        "HF-0002",
+        "HF-0003"
+      ],
+      "value": {
+        "rule": "V0 filename extensions/allowlist and library tag hints; no content validation"
+      }
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "coverage": {
+    "complete": true,
+    "files_returned": 6,
+    "files_reported": 6,
+    "max_files": 1000,
+    "max_pages": 1,
+    "pages_received": 1
+  },
+  "accounting": {
+    "requests_attempted": 1,
+    "max_requests": 1,
+    "max_pages": 1,
+    "retries": 0,
+    "timeout_seconds": 10.0,
+    "response_byte_limit": 1048576,
+    "metadata_body_bytes_retrieved": 0,
+    "fixture_body_bytes_read": 900,
+    "network_requests_attempted": 0,
+    "model_payload_bytes_retrieved": 0,
+    "file_content_bytes_retrieved": 0,
+    "note": "Body bytes only; excludes headers/TLS. A refused oversized stream may read one extra sentinel byte. Counts bytes returned by body reads, including partial reads before failure; excludes unread or transport-buffered bytes."
+  },
+  "security": {
+    "read_only": true,
+    "credentials_used": false,
+    "repository_code_executed": false,
+    "file_contents_retrieved": false,
+    "repository_content_untrusted": true
+  }
+}
