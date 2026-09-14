@@ -7,15 +7,15 @@
 - Repository: **huggingface-helper-scanner**.
 - Current phase: **Phase 0 - Foundation**.
 - Session: **Session 0 - HHS Genesis**, 2026-09-13, America/Los_Angeles.
-- Status: **Session 0 INCOMPLETE / PAUSED**. The pause is intentional because the Codex usage window was nearly exhausted. This checkpoint is **not completion of Phase 0**.
+- Status: **Session 0 COMPLETE / Phase 0 COMPLETE**, final review 2026-09-14. Session 1 has not started; stop here until a new explicitly scoped task.
 - Actual local workspace: `/mnt/c/Codex-Projects/huggingface-helper-scanner`.
 - Windows equivalent: `C:\Codex-Projects\huggingface-helper-scanner`.
 - Workspace selection: existing shared parent passed a scoped write/read/remove test; fallback was unnecessary.
 - GitHub: https://github.com/chatgptopenaiagi/huggingface-helper-scanner
 - Visibility: **PUBLIC**. License: **not selected**.
 - Branch: `main`.
-- Initial foundation commit: **No earlier foundation commit; the initial commit is the paused checkpoint, identified by current HEAD and the external handoff.**.
-- Latest commit: **current `HEAD`**, resolved with `git log -1 --format=%H`; a file cannot contain the hash of the commit containing itself. The checkpoint handoff records the pushed hash. Do not mistake this checkpoint for a completed foundation release.
+- Initial foundation commit: `98d89c8760e1f61925cc5feb2d05dfb674add5e9` — the original paused checkpoint, preserved unchanged.
+- Latest commit: **current `HEAD`**, resolved with `git log -1 --format=%H`; a file cannot contain the hash of the commit containing itself. The completion commit follows the initial paused checkpoint; this is documentation completion, not a software release.
 
 ## Completed work
 
@@ -41,9 +41,11 @@ Historical Windows 11/build-28000 and Ubuntu-26.04 hints were not confirmed. The
 
 Initial URL/repository-type support; bounded API pagination and revision identity; which files to inspect later; conflicting requirement sources; memory estimates for workload/quantization variants; selected execution-context identity; confidence calibration; schema evolution; cache reuse semantics; licensing; future execution approval/rollback design. See the architecture, theory and roadmap.
 
-## Required continuation: finish Session 0 first
+## Session 0 completion review
 
-Read RESUME.md first. Preserve the 89 existing evidence records; do not regenerate observations. Repository files were reviewed, secret-pattern checks passed, and schema/example validation plus negative/reference checks passed before the pause. Final Session 0 consistency review, documentation completion, completion-status updates and formal completion report remain unfinished. Reuse passed checks unless a relevant change or specific inconsistency justifies repeating them. The checkpoint commit/push is a save operation, not completion.
+Final documentation, draft-schema/security profile and baseline consistency review completed. The baseline retains all 89 evidence records, nine Python providers and four CUDA-available Windows torch providers. All three JSON artifacts are byte-identical to the initial checkpoint. Existing successful Draft 2020-12/example and negative-case validation is reused; no validator or machine probe was rerun. JSON parsing, reference integrity and provider counts were checked from stored artifacts. See the final session-log entry for publication checks and changed files.
+
+No unresolved Session 0 content blocker remains. Historical probe failures below remain evidence, not repair tasks. Licensing and future product questions remain deliberately deferred.
 
 No packages or system components were intentionally modified. Existing failures/conflicts are preserved: Windows 10/build 19045 rather than historical Windows 11/build 28000; Ubuntu not in the current-user WSL list; Fedora Docker socket denial; Miniforge HF CLI output-encoding error; initial PowerShell script-policy rejection followed by successful inline read-only queries; initial Windows npm path error followed by a successful native-path retry.
 
@@ -56,4 +58,4 @@ No packages or system components were intentionally modified. Existing failures/
 
 Accept a Hugging Face URL and turn bounded repository metadata into structured evidence. Begin with public model repository metadata; recognize dataset/Space URLs and return explicit unsupported/unknown outcomes until their scope is deliberately added. Preserve requested/resolved revision, provenance and bounded failure states. Use fixtures first and an explicitly scoped metadata-only check if needed. Do not install anything, download model weights, execute repository code, implement the machine engine or advance the other roadmap phases.
 
-On return, read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md in that order. Resume Session 0 first. A roadmap issue is not permission to implement it now.
+On return, read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md in that order. Session 0 is complete; stop until a new authorized task. A roadmap issue is not permission to implement it now.

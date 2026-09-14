@@ -4,7 +4,7 @@ These are directional stages, not delivery dates or permission to implement futu
 
 | Phase | Direction | Exit evidence / boundary |
 |---|---|---|
-| 0 — current | Foundation, theory, GitHub, security/evidence model and baseline | Reviewed docs/schema/example/baseline, planning issues, clean pushed repository; no software |
+| 0 — complete | Foundation, theory, GitHub, security/evidence model and baseline | Reviewed docs/schema/example/baseline, planning issues, clean pushed repository; no software |
 | 1 | Hugging Face Repository Inspector V0 | URL to bounded metadata evidence; revisions/failures/coverage; no installs or weights |
 | 2 | Local Machine Probe Engine | Named scope, trusted provider probes, timeouts, redaction and precise non-detection |
 | 3 | Requirement Extraction and Normalization | Sourced constraints, alternatives, conflicts and explicit unknowns |
@@ -37,7 +37,7 @@ Windows/WSL separation is modeled now, even though broad multi-environment suppo
 
 Each issue describes a future goal, boundaries and acceptance evidence. None was implemented in Session 0.
 
-## Exact next scope
+## Future scope — requires new authorization
 
 **PHASE 1 / SESSION 1 — Hugging Face Repository Inspector V0**
 

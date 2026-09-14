@@ -2,7 +2,7 @@
 
 **HuggingFace Helper Scanner**
 
-**Status: CONCEPT / FOUNDATION PHASE.** No HHS application, CLI, scanner, installer or executable exists yet. This repository contains the Session 0 architecture, project memory, a manually collected development baseline and a draft manifest contract.
+**Status: SESSION 0 / PHASE 0 COMPLETE — foundation only.** No HHS application, CLI, scanner, installer or executable exists yet. This repository contains the Session 0 architecture, project memory, a manually collected development baseline and a draft manifest contract.
 
 > **DISCOVER != MODIFY**
 > **PLAN != EXECUTE**
@@ -41,10 +41,11 @@ Scanning is read-only by default. Future installation/configuration belongs to a
 
 ## Read first
 
-1. [PROJECT_STATE.md](PROJECT_STATE.md): current phase, workspace, completed/unimplemented work and next task.
-2. [Session log](docs/SESSION_LOG.md): where development stopped.
-3. [Roadmap](docs/ROADMAP.md): future phases and GitHub issues.
-4. [Architecture](docs/ARCHITECTURE.md), [security model](docs/SECURITY_MODEL.md) and [evidence model](docs/EVIDENCE_MODEL.md).
+1. [RESUME.md](RESUME.md): completed Session 0 handoff and stop boundary.
+2. [PROJECT_STATE.md](PROJECT_STATE.md): current phase, workspace, completed/unimplemented work and next task.
+3. [Session log](docs/SESSION_LOG.md): where development stopped.
+4. [Roadmap](docs/ROADMAP.md): future phases and GitHub issues.
+5. [Architecture](docs/ARCHITECTURE.md), [security model](docs/SECURITY_MODEL.md) and [evidence model](docs/EVIDENCE_MODEL.md).
 
 ## Repository map
 
@@ -58,7 +59,7 @@ Repository: https://github.com/chatgptopenaiagi/huggingface-helper-scanner
 
 Public visibility does not select a software license. **No license is selected in Session 0.** Licensing will be decided in a future session; there is intentionally no LICENSE file. See [CONTRIBUTING](CONTRIBUTING.md).
 
-## Exact next session
+## Future session — requires new authorization
 
 **HHS SESSION 1: HUGGING FACE REPOSITORY INSPECTOR V0**
 

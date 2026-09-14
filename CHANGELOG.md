@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased — 2026-09-13 — Session 0
+## Unreleased — 2026-09-14 — Session 0 complete
+
+- Completed the final foundation review and superseded the paused handoff; preserved the initial checkpoint and all JSON artifacts.
+
+### Foundation created 2026-09-13
 
 - Established HHS identity, vision, architecture, fixed safety laws and provider-neutral interoperability goals.
 - Created project memory, roadmap, security/evidence models and ten GitHub planning issues.

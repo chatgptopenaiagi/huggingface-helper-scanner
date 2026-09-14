@@ -2,7 +2,7 @@
 
 Project HHS means HuggingFace Helper Scanner. Repository name is huggingface-helper-scanner. It is separate from ARX and OLW.
 
-Session 0 is PAUSED, not complete. Read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md first. Finish Session 0 review before any Session 1 work.
+Session 0 is COMPLETE. Read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md first. Session 1 has not started and requires a new explicitly authorized task.
 
 ## Current boundary
 

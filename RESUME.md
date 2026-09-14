@@ -1,49 +1,23 @@
-# Resume HHS — Session 0 paused
+# Resume HHS — Session 0 COMPLETE
 
-## Where we stopped
-
-Session 0 is **INCOMPLETE / PAUSED**, intentionally because the Codex usage window was nearly exhausted. Phase 0 has not been formally completed. The checkpoint preserves the existing work and is not a release or completion declaration.
+Session 0 / Phase 0 foundation review is **COMPLETE** (2026-09-14). This handoff supersedes the paused handoff at checkpoint `98d89c8760e1f61925cc5feb2d05dfb674add5e9`. The original pause remains recorded in [SESSION_LOG.md](docs/SESSION_LOG.md).
 
 Workspace: `/mnt/c/Codex-Projects/huggingface-helper-scanner`
 
 Repository: https://github.com/chatgptopenaiagi/huggingface-helper-scanner
 
-Branch: `main`. Checkpoint message: `chore: checkpoint paused HHS Session 0`. Its hash is available from Git history and the external handoff.
+Branch: `main`. Initial checkpoint: `98d89c8760e1f61925cc5feb2d05dfb674add5e9`. Latest completion commit: `HEAD`; resolve with `git log -1 --format=%H`. History is preserved by a normal follow-up commit.
 
-## What is already safe and complete
+## Completed foundation
 
-- Public repository, existing origin, and ten roadmap issues for Phases 1–10. Do not recreate them.
-- Foundation documents, architecture, provider-neutral design, security/evidence models, ARX relationship and roadmap.
-- Real sanitized manual baseline: **89 evidence records**, nine queried Python providers and four Windows PyTorch providers reporting CUDA available. Preserve the JSON unchanged unless a specific documented correction is necessary.
-- Draft JSON Schema and explicitly illustrative example; no HHS runtime exists.
-- Original 29 files were reviewed; JSON/schema/example, negative validation cases, semantic reference integrity, Markdown links, ignore rules and secret-pattern/size checks passed. No installs were required.
-- No packages/system components intentionally modified; no ARX modifications, model downloads or Phase 1 implementation.
+Reviewed documentation, architecture, security/evidence model, draft schema, illustrative example and manual baseline. The three JSON artifacts remain byte-identical to the checkpoint: 89 evidence records, nine Python providers and four Windows torch providers reporting CUDA available. Previously passed schema/example and negative checks are retained; no system probes were repeated. Final checks and limitations are recorded in the session log.
 
-## What is incomplete
+No HHS runtime exists. No packages, repairs, driver/toolkit changes, services, installers or model downloads were introduced. No ARX changes. No license has been selected. Historical failures and conflicting hints remain preserved evidence.
 
-Final Session 0 consistency sign-off, any genuinely necessary documentation finalization, formal completion-state updates, final commit/push integrity checks for completion and the human completion report. The save checkpoint does not satisfy those completion gates by itself. Licensing remains deliberately undecided, not a task to resolve now. Future product questions remain open by design.
+## Stop boundary and future handoff
 
-Known probe failures and historical conflicts are already documented in PROJECT_STATE.md, SESSION_LOG.md and ENVIRONMENT_BASELINE.md. Do not repair the machine to match historical hints.
+**Stop after the completion commit is pushed normally and remote `main` equals local `HEAD` with a clean working tree. Session 1 is not authorized by this handoff.** The final human report records the verified remote commit, avoiding a self-containing commit hash.
 
-## Which files should be read first
+On a later explicitly authorized task, read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md first. Check Git status and remote before changes; preserve newer work and never rewrite the checkpoint.
 
-1. RESUME.md
-2. PROJECT_STATE.md
-3. docs/SESSION_LOG.md
-4. docs/ROADMAP.md
-5. docs/SECURITY_MODEL.md
-6. docs/EVIDENCE_MODEL.md
-
-Then read README.md, AGENTS.md and the specific artifacts needed for the remaining review.
-
-## Exact continuation instructions
-
-1. Run `cd /mnt/c/Codex-Projects/huggingface-helper-scanner`.
-2. Inspect `git status`, `git branch --show-current`, `git remote -v` and `git log -3 --oneline`. Preserve any newer work; never force-push or rewrite the checkpoint.
-3. Read the files above and resume **Session 0 first**. Do not begin HHS Session 1.
-4. Review only unresolved consistency/finalization items. Reuse existing successful schema/example/secret checks unless changed content or a specific inconsistency requires another check. Do not repeat system probes or regenerate the 89 records for completeness.
-5. Review any final changes for secrets/redaction, valid schema/example references and documentation consistency. No packages, system changes, new broad scans or model weights.
-6. When Session 0 has actually been reviewed and completed, update project state/session log, supersede this paused handoff clearly, commit only necessary documentation corrections, push normally and verify remote commit plus clean status.
-7. Report formal Session 0 completion. Only a subsequent authorized scope may start **HHS SESSION 1: HUGGING FACE REPOSITORY INSPECTOR V0**, initially metadata-only with no installs or weight downloads.
-
-The original first-commit message was superseded by the requested emergency checkpoint message. A later completion commit must preserve this history.
+The proposed future scope is **HHS SESSION 1: HUGGING FACE REPOSITORY INSPECTOR V0**: bounded public-model repository metadata, explicit revision/provenance/failure states, fixtures first, no installs or model weights. Roadmap issues are memory, not execution permission. Update project state before implementing only a newly authorized scope.
