@@ -1,0 +1,10 @@
+{
+  "description": "Synthetic machine command output only; no real machine facts.",
+  "host": {"os": "linux", "name": "Fedora Linux", "version": "44", "build": "6.1-microsoft-standard-WSL2", "architecture": "x86_64", "wsl": true, "cpu_model": "Synthetic CPU", "logical_processors": 12, "memory_bytes": 34359738368},
+  "windows": {"os": "windows", "name": "Microsoft Windows 10 Pro", "version": "10.0.19045", "build": "19045", "architecture": "64-bit", "wsl": false, "cpu_model": "Synthetic CPU", "logical_processors": 12, "memory_bytes": 68719476736},
+  "python": {"version": "3.14.7", "environment_type": "system", "pip": {"state": "OBSERVED", "version": "26.0"}, "torch": {"state": "NOT_FOUND"}},
+  "torch": {"version": "3.14.7", "environment_type": "venv", "pip": {"state": "OBSERVED", "version": "26.0"}, "torch": {"state": "OBSERVED", "version": "2.9.0+cu130", "cuda_available": true, "cuda_runtime": "13.0", "cudnn_runtime": 91000, "gpus": [{"name": "Synthetic GPU", "compute_capability": [8, 6]}]}},
+  "conda": {"base_path": "C:\\Tools\\miniforge", "executable": "C:\\Tools\\miniforge\\Scripts\\conda.exe", "environments": [{"path": "C:\\Tools\\miniforge", "python_path": "C:\\Tools\\miniforge\\python.exe"}], "truncated": false},
+  "nvidia": "Synthetic GPU, 580.1, 6144, 8.6\n",
+  "docker": {"Client": {"Version": "28.0"}, "Server": {"Version": "28.0"}}
+}

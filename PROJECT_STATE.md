@@ -5,9 +5,9 @@
 - Project: **HHS**.
 - Full name: **HuggingFace Helper Scanner**.
 - Repository: **huggingface-helper-scanner**.
-- Current phase: **Phase 1 - Hugging Face Repository Inspector**.
-- Session: **Session 1.1 - Live Metadata Acceptance**, 2026-09-14, America/Los_Angeles.
-- Status: **Session 1.1 COMPLETE / Phase 1 V0 LIVE-VALIDATED** for the single authorized target and observed revision. Session 0 / Phase 0 remains COMPLETE. The user explicitly authorized Phase 1 only on 2026-09-14.
+- Current phase: **Phase 2 - Local Machine Probe Engine V0**.
+- Session: **Session 2 — PAUSED / INCOMPLETE**, 2026-09-17, Europe/Vienna.
+- Status: **Session 2 PAUSED / INCOMPLETE**. Explicitly authorized from accepted clean main `542dd80b4841609763061de852d66bd252e2524d`. Fixture-first, bounded read-only machine probes only; no Phase 3. Sessions 0, 1 and 1.1 remain complete.
 - Session 1 starting commit: `b3068e6a68fd69193c226507c2d51a318edb12a5`; clean local main and remote main matched before implementation.
 - Actual local workspace: `/mnt/c/Codex-Projects/huggingface-helper-scanner`.
 - Windows equivalent: `C:\Codex-Projects\huggingface-helper-scanner`.
@@ -60,10 +60,19 @@ Remaining limitations: public model metadata only; conservative URL/path grammar
 
 ## Exact next scope
 
-Stop at Phase 1. Session 1.1 adds validation evidence/documentation only; no further live request, environment scan, repair, installer or Phase 2 work is authorized. Latest commit is HEAD; normal push and local/remote equality are verified in the human handoff.
+Session 2 is authorized: implement and test Local Machine Probe Engine V0, then one bounded live machine validation, documentation, normal forward commit/push and verification. No Hugging Face calls, installs, repairs, broad scans or Phase 3. Latest commit is HEAD after publication.
 
 On return read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md first, then check Git. The initial checkpoint and completed Session 0 commit remain ancestors; never rewrite them. No HHS license has been selected.
 
 ## Continuity recheck — 2026-09-17
 
 A supplied Session 0 resume request described the historical pause. Repository evidence confirms Session 0 was already completed at `b3068e6a68fd69193c226507c2d51a318edb12a5`, followed by completed Sessions 1 and 1.1. Starting HEAD and live GitHub main both matched `2bc916b467088d9356398d11d622cba61f520815`. Preserve this newer state. Foundation JSON remains checkpoint-identical with 89 evidence records; reference and JSON checks passed. Corrected stale roadmap acceptance instructions and historical example wording. See the session journal for checks and limitations. Exact next scope remains STOP pending a new scoped task; Phase 2 is not authorized. Latest review commit is HEAD after publication.
+
+
+## Session 2 preservation checkpoint — 2026-09-17
+
+Development stopped by explicit human instruction at 2026-09-17T00:23:40Z. Starting/pre-checkpoint HEAD: `542dd80b4841609763061de852d66bd252e2524d`. Latest WIP checkpoint is HEAD after publication; exact hash belongs in the external handoff. This is NOT Session 2 completion.
+
+PARTIAL: 24 authored synthetic test methods, fixture, draft bounded runner and fixed host/Python/Windows/Conda payload strings. NOT_STARTED: engine.py (identity, planning, parsing, redaction, snapshots/conflicts), CLI integration, live validation and product docs. One fixture-first test invocation FAILED at import with ModuleNotFoundError for hhs.machine.engine; zero test bodies passed/executed. Runner/payloads NOT_TESTED. Prior 29 Phase 1 tests not rerun. Existing synthetic JSON parses; no Session 2 machine report exists. No live scan has run; its one authorization remains unconsumed. No installs/system changes/secret inspection/broad scan/model download.
+
+Read the final preservation entry in docs/SESSION_LOG.md for exact files, checks, known questions and ordered continuation. First unfinished task is engine.py against the preserved synthetic contracts. Do not recreate completed drafts or repeat historical machine/HF probes. Stop now; resume only when the human resumes development. Phase 3 remains unauthorized.

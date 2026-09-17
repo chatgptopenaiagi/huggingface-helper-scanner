@@ -1,6 +1,6 @@
 # Session log
 
-Current status: **Session 1.1 COMPLETE / Phase 1 V0 LIVE-VALIDATED**, with the earlier failure preserved. Session 0 remains COMPLETE; Phase 2 is not started.
+Current status: **Session 2 PAUSED / INCOMPLETE — preservation checkpoint**. Sessions 0, 1 and 1.1 remain complete. Phase 3 is not authorized.
 
 ## Session 0 - HHS Genesis
 
@@ -162,3 +162,73 @@ Repository-focused token/private-key/credential-URL pattern checks found only th
 Changed files: PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md and docs/HHS_MANIFEST_CONCEPT.md. Corrected stale roadmap instructions to repeat the already-completed live check and clarified historical example wording. RESUME.md already correctly records completion and is preserved. No source, tests or foundation artifacts changed. Publication uses a normal forward documentation commit, followed by push and remote equality/clean-tree verification in the human report; latest review commit is HEAD. No installs, system changes, ARX changes, model downloads or Hugging Face calls occurred.
 
 Exact next scope: STOP. Session 1 was not started during this review; it had already completed. Any Phase 2 work or further live request requires a new scoped task. The historical Session 0 next objective was Repository Inspector V0, now delivered.
+
+
+## Session 2 — Started
+
+2026-09-17, Europe/Vienna. The human accepted documentation-only `542dd80b4841609763061de852d66bd252e2524d` as the authoritative start after the safety gate stopped on the earlier HEAD mismatch. Clean main confirmed. Explicit scope: standard-library bounded read-only machine/provider probes, deterministic fixtures first, one narrow live validation, documentation and final forward publication. No installs, repairs, credential inspection, broad disk scans, Hugging Face requests or Phase 3. State updated before implementation.
+
+
+## Session 2 — Preservation checkpoint / PAUSED, INCOMPLETE
+
+Timestamp: 2026-09-17T00:23:40Z (2026-09-17, Europe/Vienna). Project: HHS — HuggingFace Helper Scanner. Session: 2, Local Machine Probe Engine V0. Phase: 2. User explicitly stopped development for usage-budget preservation. This is a WIP checkpoint, not acceptance or release. Phase 3 NOT_STARTED and not authorized.
+
+### Identity and mission
+
+Authoritative Session 2 starting commit and HEAD before checkpoint: `542dd80b4841609763061de852d66bd252e2524d`, branch main. The human explicitly accepted that prior documentation-only commit; do not revert, amend or rewrite it. Original Session 0 checkpoint remains `98d89c8760e1f61925cc5feb2d05dfb674add5e9`. Latest WIP checkpoint self-reference is HEAD after publication; resolve with `git rev-parse HEAD`. Its exact hash and push result belong in the final external handoff.
+
+Authorized objective: standard-library Local Machine Probe Engine V0 with provider-scoped host/hardware/Python/Conda/GPU/dev-tool/Docker observations, finite commands, structured evidence, synthetic tests first, inspect-machine CLI, then one narrow live machine validation and reviewed snapshot. Normal final publication was authorized; this preservation task separately authorizes a forward WIP commit/push. No Phase 3, compatibility reconciliation, installation recommendations, package installation, repairs, environment changes, broad disk discovery, credentials, model downloads or external project-code execution.
+
+### Completed preparation and component state
+
+- COMPLETE: accepted starting-state check (clean main), required memory/security reads, pre-implementation state update, bounded read of existing baseline provider records for design context only. No historical fact promoted to fresh observation.
+- COMPLETE as authored data, not behavioral validation: tests/fixtures/machine.json is explicitly synthetic and parses as JSON.
+- PARTIAL: tests/test_machine.py contains 24 test methods plus FakeRunner. Tests cover requested cases and additional limits/path checks, but none of these test bodies has run because the engine import fails.
+- PARTIAL / NOT_TESTED: src/hhs/machine/runner.py defines Spec, Result, child_environment and run_command. Draft uses absolute executable candidates, finite deadlines, shell=False, isolated cwd, constructed child environment rather than environment dumps/copies, two bounded in-memory streams (65,536 bytes each), timeout/output-limit failure codes, POSIX process-group kill and Windows direct-process kill. This is not yet a verified safety implementation.
+- PARTIAL / NOT_TESTED: src/hhs/machine/payloads.py holds fixed HOST, PYTHON, WINDOWS and CONDA script strings. Draft Linux host uses bounded fixed /etc and /proc reads; Windows uses selected CIM fields without hostname; Python intends -I -B -S invocation, manual selected-provider site-package paths without .pth hooks, pip metadata and installed torch queries; Conda lists only a selected base and at most 16 immediate envs-directory entries. No payload has been executed.
+- COMPLETE as placeholder only: src/hhs/machine/__init__.py package docstring.
+- NOT_STARTED: src/hhs/machine/engine.py, provider path canonicalization/identity, trusted command planning, tool output parsers, evidence assembly, publication redaction, machine snapshot validation, historical conflict comparison.
+- NOT_STARTED: inspect-machine CLI integration; src/hhs/cli.py remains unchanged.
+- NOT_STARTED: runner/payload/CLI-specific behavioral tests, full regression run, live machine validation, session-2 snapshot, final product documentation/acceptance.
+
+### Files and artifacts
+
+Created: src/hhs/machine/__init__.py, src/hhs/machine/runner.py, src/hhs/machine/payloads.py, tests/test_machine.py, tests/fixtures/machine.json.
+
+Modified: PROJECT_STATE.md, RESUME.md, docs/SESSION_LOG.md (session-start and checkpoint memory only). No Session 2 report or live snapshot exists. docs/LOCAL_MACHINE_PROBE_V0.md does not exist yet. Existing Phase 1 source/tests, foundation JSON/schema/example and prior reports were not modified. No generated runtime artifacts need cleanup.
+
+### Tests and known failure
+
+Executed once before implementation: `PYTHONPATH=src python3 -B -m unittest discover -s tests -p test_machine.py -v`.
+
+Result: FAILED, exit 1; unittest reported one loader error, zero passing test bodies, zero assertion failures. Exact cause: `ModuleNotFoundError: No module named 'hhs.machine.engine'`. The 24 authored methods were not reached. This was the expected fixture-first failure; engine.py is still absent at checkpoint. No test rerun after runner/payload creation. All new runtime behavior is NOT_TESTED. Existing 29 Phase 1 tests were NOT_RUN in Session 2; their earlier success is historical evidence only.
+
+Preservation-only checks: existing machine fixture parsed successfully; AST count confirms 24 authored methods (not test execution); all eight changed/new files reviewed as text, with count/location-only recognizable token/private-key/credential-URL/assigned-secret pattern checks finding no matches. This is not proof of universal secret absence. Git diff/whitespace and final staged publication checks are part of checkpoint publication; no runtime validation is implied.
+
+Known implementation blocker: missing engine module prevents test loading. No runtime bugs have been established because draft runner/payloads have not run. Review points deferred to resumed development: Windows/WSL path translation and process termination semantics; selected trusted executable policy; Python environment layout/venv isolation across versions; Conda fixture path escaping versus canonical paths; strict JSON/output parsers and redaction; scope/provider counts and total scan budget; exact safe live-provider allowlist. These are unverified questions, not claimed fixes.
+
+### Live operations, provenance and safety
+
+Session 2 has performed only repository Git reads, repository document/fixture/source reads and writes, and the failed deterministic test import. No machine probe, installed torch import, Conda enumeration, tool inventory, HF request, model fetch or remote-code execution occurred. One authorized Session 2 bounded live machine scan is UNCONSUMED; run only after deterministic gates pass in a resumed development session. Session 1.1 HF live authorization remains consumed: do not repeat it. Checkpoint Git publication is a separate authorized repository output operation, not a machine scan.
+
+Historical baseline provider records were read, not reprobed: Fedora system; Windows system; preview/anaconda paths represented by redacted aliases; four Windows torch environments and Miniforge. Use reports/dev-machine-baseline.json only as historical comparison and known-path context. Do not expand private-home aliases through broad searches or inspect AI project contents. No new host/hardware facts or conflicts were measured.
+
+Safety state: installs NO; system modifications NO; environment repairs/changes NO; secrets intentionally inspected NO; environment dumps NO; broad disk scans NO; model downloads NO; external repository project code executed NO; ARX modifications NO. No long-running optional process is active. No new development occurred after the preservation instruction; only checkpoint review, memory and publication.
+
+### Ordered continuation
+
+NEXT 1: Read current RESUME.md, PROJECT_STATE.md and this journal entry, then ROADMAP/security/evidence docs and AGENTS.md. Its pre-Session-2 prohibition is superseded by the explicit Session 2 user authorization recorded here; retain all safety invariants. Verify main/HEAD/clean state without rewriting history.
+
+NEXT 2: Inspect tests/test_machine.py, tests/fixtures/machine.json, src/hhs/machine/runner.py and payloads.py, then existing src/hhs/cli.py. First unfinished task: implement src/hhs/machine/engine.py to satisfy the fixture contracts for inspect_machine, provider, validate_snapshot and compare_history. Preserve designed provider separation and failure states; tests are provisional and may need corrections supported by evidence.
+
+NEXT 3: Complete bounded trusted command planning, strict output projection/redaction, evidence references, host/provider identities and historical comparisons. Review/test the draft runner and isolated payloads with deterministic mocks. Add inspect-machine CLI and focused output/no-overwrite tests. No real probe during this stage.
+
+NEXT 4: Run machine tests and full deterministic regressions; fix only scoped failures. Record actual counts. Review command allowlist, finite time/output/provider bounds and zero-mutating-command policy before live use.
+
+NEXT 5: Perform the one still-authorized narrow live scan of host/hardware/explicitly selected trusted providers/toolchains. No recursive drives, user documents, AI project contents, credentials, installs, repairs or HF calls. Preserve success or honest failure in reports/session-2-machine-snapshot.json; retain separate historical provenance/conflicts. Do not retry a consumed live scan without new scope/authorization.
+
+NEXT 6: Validate snapshot JSON/references and publication redaction; create docs/LOCAL_MACHINE_PROBE_V0.md; update README, architecture/evidence/security/roadmap, AGENTS and current handoff as needed. Review all Session 2 acceptance gates before marking COMPLETE. Normal forward feature commit, push and remote/clean verification; STOP before Phase 3.
+
+Do NOT recreate fixtures or draft modules, redo the obsolete Session 0 task, rerun baseline scans, repeat consumed HF live requests, or assume this WIP passed tests. Do not execute payloads merely to rediscover checkpoint state. Resume development only in the next human-resumed session. Publication failure must be reported as LOCAL CHECKPOINT SAVED — REMOTE PUSH NOT VERIFIED; do not spend budget on repeated retries.
+
+Future usage rule received during checkpoint preparation: preserve automatically at approximately 10% remaining when an actual usage value is available. The five-hour usage indicator is not exposed to this session; no threshold crossing is claimed. This checkpoint was triggered by the earlier explicit preservation request, not that future condition. Finish the already-active checkpoint and stop; do not resume development during publication.

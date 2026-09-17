@@ -1,3 +1,32 @@
+# Resume HHS — Session 2 PAUSED / INCOMPLETE
+
+The human stopped development for an intelligent preservation checkpoint on 2026-09-17. This is a WIP, not a completed Local Machine Probe Engine V0. Phase 3 is not started or authorized.
+
+Repository: https://github.com/chatgptopenaiagi/huggingface-helper-scanner
+Workspace: `/mnt/c/Codex-Projects/huggingface-helper-scanner`; branch `main`.
+Session 2 starting and pre-checkpoint HEAD: `542dd80b4841609763061de852d66bd252e2524d` (explicitly accepted by the human). Latest checkpoint: `HEAD` after publication; resolve with `git rev-parse HEAD` and compare the final human handoff. Never invent a self-containing hash or rewrite earlier history.
+
+## Exact resume entry point
+
+Read RESUME.md, PROJECT_STATE.md and the final **Session 2 — Preservation checkpoint / PAUSED, INCOMPLETE** entry in docs/SESSION_LOG.md first. Then read docs/ROADMAP.md, docs/SECURITY_MODEL.md, docs/EVIDENCE_MODEL.md and AGENTS.md. Session 2 explicit authorization supersedes AGENTS.md's older Phase 2 stop wording; its safety invariants still apply. Verify Git continuity and preserve newer work.
+
+Inspect these preserved files: tests/test_machine.py, tests/fixtures/machine.json, src/hhs/machine/runner.py, src/hhs/machine/payloads.py, src/hhs/machine/__init__.py and existing src/hhs/cli.py.
+
+**First unfinished task:** implement src/hhs/machine/engine.py with inspect_machine, provider, validate_snapshot and compare_history against the synthetic fixture contracts. It does not exist yet. Do not recreate the fixture or runner/payload drafts. See the journal's NEXT 1–6 sequence for the rest.
+
+## Exact checkpoint state
+
+- PARTIAL: 24 test methods and FakeRunner authored; synthetic fixture is valid JSON. Draft runner and fixed payload strings written, NOT_TESTED and not integrated.
+- FAILED: one fixture-first test invocation, `PYTHONPATH=src python3 -B -m unittest discover -s tests -p test_machine.py -v`, exited 1 with `ModuleNotFoundError: No module named 'hhs.machine.engine'`. One loader error; zero test bodies ran or passed. No rerun after writing draft modules.
+- NOT_STARTED: engine, machine CLI, runner/payload behavioral tests, full regressions, live scan, reports/session-2-machine-snapshot.json and docs/LOCAL_MACHINE_PROBE_V0.md.
+- Session 2 live machine validation authorization: **UNCONSUMED**. Run once only after deterministic/safety gates pass on resumption. Session 1.1 HF live authorization is already consumed; no new HF request is authorized.
+- No installs, repairs, system/environment changes, broad scans, credential inspection, model downloads, external repository code execution or ARX changes.
+- Changed memory: PROJECT_STATE.md, RESUME.md, docs/SESSION_LOG.md. Created files: the three machine module files and two test/fixture files above. No source from Phase 1, foundation JSON/schema/example or prior snapshot was modified.
+
+No further development is authorized during preservation. Stop after safe checkpoint publication. A resumed Session 2 may finish only the accepted bounded read-only machine engine scope; no compatibility reconciliation or Phase 3. Publication details and exact checkpoint hash are reported outside the commit after push verification.
+
+## Previous handoff (historical)
+
 # Resume HHS — Session 1.1 COMPLETE
 
 Session 0 / Phase 0 remains COMPLETE. Session 1 / Phase 1 V0 is COMPLETE, with the corrected transport live-validated in Session 1.1. Repository Inspector V0 is implemented; Phase 2 is not started.
