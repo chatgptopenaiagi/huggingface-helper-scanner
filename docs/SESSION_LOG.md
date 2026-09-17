@@ -149,3 +149,16 @@ Changed files: PROJECT_STATE.md, RESUME.md, docs/SESSION_LOG.md, docs/HF_REPOSIT
 Publication checks review JSON/snapshot structure, references, report-to-snapshot counts/hash, Markdown links, secret/private-path patterns and diff whitespace. Publish via normal forward commit `test: validate Repository Inspector V0 live transport`, then verify local HEAD, origin/main and GitHub main match and working tree is clean. Latest self-reference is HEAD; exact pushed hash belongs in the final human report.
 
 Session 1.1 COMPLETE: the corrected transport has real-world acceptance evidence for this target/revision. Exact next scope: STOP. No additional live request or Phase 2 work is authorized. No license selected.
+
+
+## Continuity review of historical Session 0 resume request
+
+Date: 2026-09-17 (Europe/Vienna). Initial checkpoint: `98d89c8760e1f61925cc5feb2d05dfb674add5e9`. Existing Session 0 completion: `b3068e6a68fd69193c226507c2d51a318edb12a5`. Starting HEAD: `2bc916b467088d9356398d11d622cba61f520815`; clean main, origin/main and live GitHub main matched. The supplied paused-session premise is superseded by repository evidence of completed Sessions 0, 1 and 1.1. No phase was restarted or rolled back.
+
+Evidence/checks actually used: requested repository memory documents, stored foundation JSON, Git history/status/remotes, live `git ls-remote`, and read-only GitHub issue listing. Issues #1–#10 exist and remain OPEN, including #1 despite documented V0 completion; no issue was changed or duplicated. All three foundation artifacts parse and are byte-identical to the original checkpoint. Unique evidence IDs and references resolve in baseline/example. Baseline preserves 89 records (67 OBSERVED, five ERROR, eight NOT_FOUND, nine VERIFIED), with unchanged provider identities. Schema required-property and local-reference sanity checks passed; example is explicitly illustrative and execution unauthorized. Prior full Draft 2020-12 and negative-case validation is reused, not rerun. No runtime tests or machine probes were rerun for this documentation review.
+
+Repository-focused token/private-key/credential-URL pattern checks found only the previously documented synthetic URL in tests/test_inspector.py. No real secret was identified; pattern checks do not prove universal absence. No credential stores or environment values were inspected. Historical OS/distro conflicts, Docker permission denial and other recorded probe errors remain unresolved evidence; licensing remains undecided.
+
+Changed files: PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md and docs/HHS_MANIFEST_CONCEPT.md. Corrected stale roadmap instructions to repeat the already-completed live check and clarified historical example wording. RESUME.md already correctly records completion and is preserved. No source, tests or foundation artifacts changed. Publication uses a normal forward documentation commit, followed by push and remote equality/clean-tree verification in the human report; latest review commit is HEAD. No installs, system changes, ARX changes, model downloads or Hugging Face calls occurred.
+
+Exact next scope: STOP. Session 1 was not started during this review; it had already completed. Any Phase 2 work or further live request requires a new scoped task. The historical Session 0 next objective was Repository Inspector V0, now delivered.

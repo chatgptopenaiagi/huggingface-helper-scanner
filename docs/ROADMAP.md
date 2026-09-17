@@ -41,4 +41,4 @@ Each issue describes a future goal, boundaries and acceptance evidence. None was
 
 Repository Inspector V0 implements bounded model repository metadata with fixtures, evidence, limits and a JSON CLI. Dataset/Space URL forms are recognized but inspection is unsupported. No file contents, machine engine, compatibility engine or executor.
 
-The one live acceptance attempt failed on a local EOF bug; the fix passed offline regression coverage. Recommended next authorized objective: a Phase 1 follow-up to repeat one bounded live check and review its snapshot. Stop until that new task. Phase 2 remains unstarted and is not an automatic continuation.
+The Session 1 live attempt failed on a local EOF bug; the fix passed offline regression coverage. Session 1.1 subsequently completed its separately authorized live metadata acceptance check successfully. That authorization is consumed. Stop: no additional live request or implementation is authorized. Phase 2 remains unstarted and requires a separately scoped human task.

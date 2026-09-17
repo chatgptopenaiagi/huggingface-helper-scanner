@@ -63,3 +63,7 @@ Remaining limitations: public model metadata only; conservative URL/path grammar
 Stop at Phase 1. Session 1.1 adds validation evidence/documentation only; no further live request, environment scan, repair, installer or Phase 2 work is authorized. Latest commit is HEAD; normal push and local/remote equality are verified in the human handoff.
 
 On return read RESUME.md, PROJECT_STATE.md, docs/SESSION_LOG.md, docs/ROADMAP.md, docs/SECURITY_MODEL.md and docs/EVIDENCE_MODEL.md first, then check Git. The initial checkpoint and completed Session 0 commit remain ancestors; never rewrite them. No HHS license has been selected.
+
+## Continuity recheck — 2026-09-17
+
+A supplied Session 0 resume request described the historical pause. Repository evidence confirms Session 0 was already completed at `b3068e6a68fd69193c226507c2d51a318edb12a5`, followed by completed Sessions 1 and 1.1. Starting HEAD and live GitHub main both matched `2bc916b467088d9356398d11d622cba61f520815`. Preserve this newer state. Foundation JSON remains checkpoint-identical with 89 evidence records; reference and JSON checks passed. Corrected stale roadmap acceptance instructions and historical example wording. See the session journal for checks and limitations. Exact next scope remains STOP pending a new scoped task; Phase 2 is not authorized. Latest review commit is HEAD after publication.

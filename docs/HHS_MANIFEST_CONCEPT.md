@@ -6,7 +6,7 @@ A portable HHS manifest should carry enough context for another human/tool/agent
 
 The initial envelope includes schema_version, hhs_version, generated_at, intent, source, repository, requirements, machine, detected_components, compatibility, blockers, warnings, missing, recommended_actions, files_required, storage_estimates, execution_candidates, evidence and security. The additional artifact_kind explicitly distinguishes illustrative examples from scan manifests.
 
-Schema version is **0.1.0-draft**. HHS version is null in the example because no HHS software exists. The schema is deliberately provisional: broad domain objects stay extensible while evidence, findings, inert actions and security fields get minimal typed structure.
+Schema version is **0.1.0-draft**. HHS version is null because the example was hand-authored during Session 0, before HHS software existed; it remains an illustrative foundation artifact. The schema is deliberately provisional: broad domain objects stay extensible while evidence, findings, inert actions and security fields get minimal typed structure.
 
 ## Meaning rules
 
